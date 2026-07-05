@@ -1,0 +1,25 @@
+:root {
+  --bm-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Segoe UI", Arial, sans-serif;
+  --bm-mono: "SFMono-Regular", "SF Mono", "JetBrains Mono", ui-monospace, Menlo,
+    Consolas, monospace;
+
+  --bm-paper: #fbfcfe;
+  --bm-card: #ffffff;
+  --bm-ink: #0e1b33;
+  --bm-ink-2: #1b2a4a;
+  --bm-navy: #1f3d6b;
+  --bm-accent: #2563a8;
+  --bm-accent-soft: #e8eef7;
+  --bm-slate: #5b6a86;
+  --bm-slate-2: #8a96ac;
+  --bm-rule: #e4e8f0;
+  --bm-rule-2: #cdd5e3;
+  --bm-gold: #c8a24b;
+  --bm-gold-soft: #f6efdd;
+  --bm-blue: #4d8fd6;
+  --bm-danger: #b0402c;
+
+  --bm-pad: clamp(20px, 4vw, 56px);
+  --d-border-radius: 6px;
+}

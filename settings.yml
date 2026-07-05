@@ -1,0 +1,99 @@
+brand_wordmark:
+  type: string
+  default: "HOUSE OF TECHNOCRATS"
+brand_tagline:
+  type: string
+  default: "TECHNOCRATS COMMUNITY"
+hero_eyebrow:
+  type: string
+  default: "House of Technocrats · Technocrats Community"
+hero_title:
+  type: string
+  default: "Where the conversation is well-made."
+hero_subtitle:
+  type: string
+  default: "Browse Collections and Spaces, follow posts by type, and climb the engagement leaderboard."
+show_hero:
+  type: bool
+  default: true
+show_recent_feed:
+  type: bool
+  default: true
+recent_feed_count:
+  type: integer
+  default: 8
+  min: 3
+  max: 20
+show_leaderboard:
+  type: bool
+  default: true
+leaderboard_id:
+  type: integer
+  default: 1
+leaderboard_count:
+  type: integer
+  default: 6
+  min: 3
+  max: 15
+
+# ---- Deep Blue Radar — login/signup landing ----
+dbr_enable:
+  type: bool
+  default: true
+dbr_header_wordmark:
+  type: string
+  default: "HOUSE OF TECHNOCRATS"
+dbr_header_tagline:
+  type: string
+  default: "DEEP BLUE RADAR"
+dbr_audio_url:
+  type: string
+  default: ""
+dbr_audio_enabled:
+  type: bool
+  default: true
+dbr_status_label:
+  type: string
+  default: "SYSTEMS IN THE BLUE"
+dbr_eyebrow:
+  type: string
+  default: "DEEP BLUE RADAR · SEASON BRIEF"
+dbr_headline:
+  type: string
+  default: "Join the Technocrats Community."
+dbr_subhead:
+  type: string
+  default: "We keep the bank's ICT infrastructure and services in the blue — operational, observed, in control. Help us hold the line."
+dbr_kicker:
+  type: string
+  default: "ENTER THE RADAR ROOM"
+dbr_method_label:
+  type: string
+  default: "THE METHOD"
+dbr_verbs:
+  type: string
+  default: '[{"verb":"JOIN","line":"Request access. Stand with the technocrats."},{"verb":"READ","line":"Read the continuity patterns."},{"verb":"VERIFY","line":"Confirm the facts. Separate signal from noise."},{"verb":"REPORT","line":"Help us discover continuity patterns."},{"verb":"MAKE","line":"Make your own blue radar."}]'
+dbr_signoff:
+  type: string
+  default: "using technocratic culture."
+dbr_footer:
+  type: string
+  default: "DEEP BLUE RADAR · HOUSE OF TECHNOCRATS · THE TECHNOCRATS COMMUNITY"
+dbr_signup_headline:
+  type: string
+  default: "Become a technocrat."
+dbr_signup_kicker:
+  type: string
+  default: "REQUEST RADAR ACCESS"
+dbr_signup_subhead:
+  type: string
+  default: "Request access to the radar room. Help keep the bank's ICT in the blue — operational, observed, in control."
+dbr_invite_headline:
+  type: string
+  default: "Join the Technocrats Community."
+dbr_invite_kicker:
+  type: string
+  default: "ACCEPT YOUR INVITATION"
+dbr_invite_subhead:
+  type: string
+  default: "You've been invited to take a shift on the radar. Blue is healthy. Blue is the standard. We defend it together."

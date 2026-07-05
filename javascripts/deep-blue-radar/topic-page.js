@@ -1,0 +1,3 @@
+function setupTopicPage() {}
+
+export { setupTopicPage };

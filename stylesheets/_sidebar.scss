@@ -1,0 +1,35 @@
+.sidebar-wrapper {
+  background: var(--bm-card);
+  border-right: 1px solid var(--bm-rule);
+}
+
+.sidebar-section-header-text,
+.sidebar-section[data-section-name] .sidebar-section-header-text {
+  @extend %bm-label;
+}
+
+.sidebar-section-link-content-text {
+  font-size: 13.5px;
+  color: var(--bm-ink-2);
+}
+
+.sidebar-section-link.active,
+.sidebar-section-link:hover {
+  background: var(--bm-accent-soft);
+  border-radius: var(--d-border-radius);
+}
+
+.sidebar-section-link.active .sidebar-section-link-content-text {
+  color: var(--bm-ink);
+  font-weight: 600;
+}
+
+.sidebar-section[data-section-name="tags"] {
+  display: none;
+}
+
+.sidebar-section[data-section-name="community"] .sidebar-more-section-links-details,
+.sidebar-section[data-section-name="community"] details.sidebar-more-section-links-details,
+.sidebar-section[data-section-name="community"] .sidebar-section-link[data-link-name="more"] {
+  display: none;
+}

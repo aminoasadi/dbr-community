@@ -1,0 +1,74 @@
+.d-header {
+  background: var(--bm-card);
+  border-bottom: 1px solid var(--bm-ink);
+  box-shadow: none;
+  height: 70px;
+}
+
+.d-header .wrap {
+  max-width: none;
+  padding: 0 var(--bm-pad);
+}
+
+.d-header .contents {
+  height: 70px;
+  align-items: center;
+}
+
+.d-header .title {
+  display: flex;
+  align-items: center;
+}
+
+.d-header .home-logo-wrapper-outlet,
+.d-header .title a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.d-header .title .logo-big,
+.d-header .title .logo-small,
+.d-header .title a img,
+.d-header .d-logo,
+.d-header__logo img {
+  display: none !important;
+}
+
+.d-header .title a::before {
+  content: var(--bm-wordmark, "HOUSE OF TECHNOCRATS");
+  font-family: var(--bm-sans);
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--bm-ink);
+  line-height: 1;
+}
+
+.d-header .title a::after {
+  content: var(--bm-tagline, "COMMUNITY");
+  margin-left: 14px;
+  padding-left: 14px;
+  border-left: 1px solid var(--bm-rule-2);
+  font-family: var(--bm-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bm-slate);
+  white-space: nowrap;
+}
+
+.d-header-icons .icon {
+  color: var(--bm-ink-2);
+  border-radius: var(--d-border-radius);
+}
+
+.d-header-icons .icon:hover,
+.d-header-icons .active .icon {
+  background: var(--bm-accent-soft);
+  color: var(--bm-ink);
+}
+
+.header-search-icon {
+  color: var(--bm-ink-2);
+}

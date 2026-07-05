@@ -1,0 +1,3 @@
+function setupComposer() {}
+
+export { setupComposer };

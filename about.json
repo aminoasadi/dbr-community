@@ -1,0 +1,29 @@
+{
+  "name": "City Inbox · Bettermode",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {},
+  "color_schemes": {
+    "City Inbox Navy": {
+      "primary": "0e1b33",
+      "secondary": "fbfcfe",
+      "tertiary": "2563a8",
+      "quaternary": "1f3d6b",
+      "header_background": "ffffff",
+      "header_primary": "0e1b33",
+      "highlight": "f6efdd",
+      "selected": "e8eef7",
+      "hover": "f2f6fb",
+      "danger": "b0402c",
+      "success": "2f7a4d",
+      "love": "c0392b"
+    }
+  },
+  "modifiers": {},
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}

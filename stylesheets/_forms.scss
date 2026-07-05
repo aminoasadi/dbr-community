@@ -1,0 +1,22 @@
+.discourse-reactions-reaction-button:hover,
+.like-count {
+  color: var(--bm-accent);
+}
+
+.btn.has-like .d-icon,
+.topic-list .likes a:hover {
+  color: var(--bm-danger);
+}
+
+.badge-category__wrapper .badge-category {
+  border-radius: 4px;
+  font-family: var(--bm-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.discourse-tag {
+  color: var(--bm-slate);
+}
