@@ -13,6 +13,32 @@ const TYPES = {
 const PATTERN_COLLECTION_SLUG = "continuity-radar";
 const contextCache = new WeakMap();
 const enhancers = new Map();
+const ICONS = {
+  "arrow-right":
+    '<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>',
+  "arrow-left":
+    '<path d="M19 12H5"/><path d="m11 18-6-6 6-6"/>',
+  "arrow-down":
+    '<path d="M12 5v14"/><path d="m18 13-6 6-6-6"/>',
+  play:
+    '<path d="m8 6 10 6-10 6z"/>',
+  pause:
+    '<path d="M9 6v12"/><path d="M15 6v12"/>',
+  user:
+    '<path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M4 20a8 8 0 0 1 16 0"/>',
+  chart:
+    '<path d="M5 19V9"/><path d="M12 19V5"/><path d="M19 19v-7"/>',
+  eye:
+    '<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="3"/>',
+  heart:
+    '<path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z"/>',
+  calendar:
+    '<rect x="3" y="5" width="18" height="16"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M3 11h18"/>',
+  shield:
+    '<path d="M12 3 5 6v6c0 4.97 3.06 7.86 7 9 3.94-1.14 7-4.03 7-9V6l-7-3Z"/>',
+  flash:
+    '<path d="M13 2 5 13h6l-1 9 8-11h-6l1-9Z"/>',
+};
 
 function getSettings() {
   return (typeof settings !== "undefined" && settings) || {};
@@ -160,6 +186,65 @@ function queryAll(selector, scope = document) {
 
 function removeAll(selector, scope = document) {
   queryAll(selector, scope).forEach((node) => node.remove());
+}
+
+function toggleClass(target, className, condition) {
+  if (!target) {
+    return;
+  }
+
+  target.classList.toggle(className, !!condition);
+}
+
+function cleanupInjected(scope = document, selector = ".bm-injected, .dbr-injected") {
+  removeAll(selector, scope);
+}
+
+function applyChamfer(target, size = "default") {
+  if (!target) {
+    return target;
+  }
+
+  const map = {
+    xs: "chamfer-xs",
+    sm: "chamfer-sm",
+    lg: "chamfer-lg",
+    default: "chamfer",
+  };
+
+  target.classList.add(map[size] || map.default);
+  return target;
+}
+
+function renderIcon(name, options = {}) {
+  const markup = ICONS[name];
+
+  if (!markup) {
+    return null;
+  }
+
+  const icon = el(
+    "svg",
+    {
+      class: options.class || "als-icon",
+      viewBox: "0 0 24 24",
+      "aria-hidden": options.label ? null : "true",
+      role: options.label ? "img" : null,
+    },
+    []
+  );
+  icon.setAttribute("fill", "none");
+  icon.setAttribute("stroke", "currentColor");
+  icon.setAttribute("stroke-width", "1.75");
+  icon.setAttribute("stroke-linecap", "round");
+  icon.setAttribute("stroke-linejoin", "round");
+  icon.innerHTML = markup;
+
+  if (options.label) {
+    icon.setAttribute("aria-label", options.label);
+  }
+
+  return icon;
 }
 
 function safeLocalStorageGet(key, fallback = null) {
@@ -321,6 +406,8 @@ export {
   debounce,
   el,
   escapeHtml,
+  cleanupInjected,
+  applyChamfer,
   isFeedRoute,
   isHomeRoute,
   isInviteRoute,
@@ -332,11 +419,13 @@ export {
   queryAll,
   registerEnhancer,
   removeAll,
+  renderIcon,
   routeName,
   runEnhancers,
   safeLocalStorageGet,
   safeLocalStorageRemove,
   safeLocalStorageSet,
+  toggleClass,
   throttle,
   timeAgo,
 };

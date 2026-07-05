@@ -1,22 +1,56 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select,
+.d-editor-input,
+.select-kit .select-kit-header {
+  @include chamfer(var(--chamfer-sm));
+  @include chamfer-outline(var(--border-default), var(--chamfer-sm));
+  border-radius: 0 !important;
+  background: var(--surface-panel);
+  color: var(--text-primary);
+  min-height: var(--size-control-md);
+  padding: 0 var(--space-2);
+  box-shadow: none;
+  position: relative;
+}
+
+textarea,
+.d-editor-input {
+  padding-block: var(--space-2);
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.d-editor-input:focus,
+.select-kit .select-kit-header.is-focused {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--border-brand);
+}
+
 .discourse-reactions-reaction-button:hover,
 .like-count {
-  color: var(--bm-accent);
+  color: var(--coral);
 }
 
 .btn.has-like .d-icon,
 .topic-list .likes a:hover {
-  color: var(--bm-danger);
+  color: var(--coral);
 }
 
-.badge-category__wrapper .badge-category {
-  border-radius: 4px;
-  font-family: var(--bm-mono);
-  font-size: 9px;
+.badge-category__wrapper .badge-category,
+.discourse-tag {
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
 }
 
 .discourse-tag {
-  color: var(--bm-slate);
+  color: var(--primary-600);
 }

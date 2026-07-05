@@ -4,6 +4,7 @@ import {
   el,
   escapeHtml,
   num,
+  renderIcon,
   safeLocalStorageGet,
   safeLocalStorageSet,
   timeAgo,
@@ -145,7 +146,9 @@ function buildLinksCard(mount) {
       el(
         "ul",
         {},
-        links.map(([text, href]) => el("li", {}, el("a", { href, text })))
+        links.map(([text, href]) =>
+          el("li", {}, el("a", { href }, [renderIcon("arrow-right"), el("span", { text })]))
+        )
       ),
     ])
   );

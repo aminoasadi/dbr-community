@@ -1,25 +1,21 @@
 .d-header {
-  background: var(--bm-card);
-  border-bottom: 1px solid var(--bm-ink);
+  background: var(--primary-900);
+  border-bottom: 1px solid var(--primary-700);
   box-shadow: none;
-  height: 70px;
+  height: var(--size-header);
 }
 
 .d-header .wrap {
   max-width: none;
-  padding: 0 var(--bm-pad);
+  padding: 0 var(--space-4);
 }
 
 .d-header .contents {
-  height: 70px;
+  height: var(--size-header);
   align-items: center;
 }
 
-.d-header .title {
-  display: flex;
-  align-items: center;
-}
-
+.d-header .title,
 .d-header .home-logo-wrapper-outlet,
 .d-header .title a {
   display: inline-flex;
@@ -35,40 +31,54 @@
 }
 
 .d-header .title a::before {
-  content: var(--bm-wordmark, "HOUSE OF TECHNOCRATS");
-  font-family: var(--bm-sans);
-  font-size: 23px;
-  font-weight: 800;
+  content: var(--bm-wordmark, "ALIASYS");
+  font-family: var(--font-primary);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-extra);
   letter-spacing: -0.04em;
-  color: var(--bm-ink);
+  color: var(--text-on-dark);
   line-height: 1;
 }
 
 .d-header .title a::after {
-  content: var(--bm-tagline, "COMMUNITY");
-  margin-left: 14px;
-  padding-left: 14px;
-  border-left: 1px solid var(--bm-rule-2);
-  font-family: var(--bm-mono);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
+  content: var(--bm-tagline, "YOUR TRUSTED TECH PARTNER.");
+  margin-left: var(--space-2);
+  padding-left: var(--space-2);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--bm-slate);
+  color: rgba(255, 255, 255, 0.72);
   white-space: nowrap;
 }
 
-.d-header-icons .icon {
-  color: var(--bm-ink-2);
-  border-radius: var(--d-border-radius);
+.d-header-icons .icon,
+.header-dropdown-toggle {
+  width: var(--size-control-sm);
+  height: var(--size-control-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-on-dark);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0;
+  background: transparent;
+}
+
+.d-header-icons .icon .d-icon,
+.header-dropdown-toggle .d-icon,
+.header-search-icon {
+  width: var(--size-icon);
+  height: var(--size-icon);
 }
 
 .d-header-icons .icon:hover,
-.d-header-icons .active .icon {
-  background: var(--bm-accent-soft);
-  color: var(--bm-ink);
-}
-
-.header-search-icon {
-  color: var(--bm-ink-2);
+.d-header-icons .active .icon,
+.header-dropdown-toggle:hover {
+  @include chamfer(var(--chamfer-sm));
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--primary-900);
 }

@@ -1,1 +1,43 @@
-/* Composer styles currently remain unchanged; file kept for theme structure parity. */
+.composer-popup,
+.d-editor-container,
+.composer-fields,
+.composer-controls {
+  border-radius: 0 !important;
+}
+
+.composer-popup {
+  @include panel-surface(var(--space-3), var(--chamfer-lg));
+  background: var(--surface-panel);
+}
+
+.composer-fields,
+.d-editor-container {
+  @include panel-surface(var(--space-2), var(--chamfer));
+  box-shadow: none;
+}
+
+.d-editor-textarea-wrapper,
+.d-editor-button-bar,
+.composer-controls {
+  background: var(--surface-panel-muted);
+  border: 1px solid var(--border-light);
+}
+
+.d-editor-button-bar {
+  min-height: var(--size-control-md);
+  padding: 0 var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.d-editor-button-bar .btn,
+.composer-controls .btn {
+  min-height: var(--size-control-sm);
+}
+
+.d-editor-button-bar .d-icon,
+.composer-controls .d-icon {
+  width: var(--size-icon);
+  height: var(--size-icon);
+}

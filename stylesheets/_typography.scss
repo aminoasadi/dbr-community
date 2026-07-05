@@ -6,9 +6,9 @@
 
 html,
 body {
-  background: var(--bm-paper);
-  color: var(--bm-ink);
-  font-family: var(--bm-sans);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -22,7 +22,7 @@ textarea,
 .select-kit,
 .cooked,
 .d-editor-input {
-  font-family: var(--bm-sans);
+  font-family: var(--font-primary);
 }
 
 h1,
@@ -31,24 +31,83 @@ h3,
 h4,
 .fancy-title,
 .title {
-  font-family: var(--bm-sans);
-  letter-spacing: -0.018em;
+  font-family: var(--font-primary);
+  font-weight: var(--fw-extra);
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
 }
 
 a {
-  color: var(--bm-accent);
+  color: var(--text-brand);
+  text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 
 a:hover {
-  color: var(--bm-ink);
+  color: var(--primary-hover);
 }
 
 %bm-label {
-  font-family: var(--bm-mono);
-  font-size: 10px;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--bm-slate);
+  color: var(--text-secondary);
+}
+
+.t-display,
+.t-h1,
+.t-h2,
+.t-h3,
+.t-h4,
+.t-body,
+.t-small,
+.t-xsmall {
+  font-family: var(--font-primary);
+}
+
+.t-display {
+  font-size: var(--text-6xl);
+  line-height: var(--leading-tight);
+  font-weight: var(--fw-extra);
+}
+
+.t-h1 {
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+  font-weight: var(--fw-extra);
+}
+
+.t-h2 {
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+  font-weight: var(--fw-bold);
+}
+
+.t-h3 {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+  font-weight: var(--fw-bold);
+}
+
+.t-h4 {
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  font-weight: var(--fw-medium);
+}
+
+.t-body {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+}
+
+.t-small {
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+
+.t-xsmall {
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
 }

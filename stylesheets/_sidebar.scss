@@ -1,33 +1,44 @@
 .sidebar-wrapper {
-  background: var(--bm-card);
-  border-right: 1px solid var(--bm-rule);
+  background: var(--primary-900);
+  border-right: 1px solid var(--primary-700);
 }
 
 .sidebar-section-header-text,
 .sidebar-section[data-section-name] .sidebar-section-header-text {
   @extend %bm-label;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.sidebar-section-link {
+  min-height: var(--size-control-md);
 }
 
 .sidebar-section-link-content-text {
-  font-size: 13.5px;
-  color: var(--bm-ink-2);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sidebar-section-link .prefix-icon {
+  width: var(--size-sidebar-icon);
+  height: var(--size-sidebar-icon);
 }
 
 .sidebar-section-link.active,
 .sidebar-section-link:hover {
-  background: var(--bm-accent-soft);
-  border-radius: var(--d-border-radius);
+  @include chamfer(var(--chamfer-sm));
+  background: var(--coral);
+  border-radius: 0;
 }
 
-.sidebar-section-link.active .sidebar-section-link-content-text {
-  color: var(--bm-ink);
-  font-weight: 600;
+.sidebar-section-link.active .sidebar-section-link-content-text,
+.sidebar-section-link:hover .sidebar-section-link-content-text {
+  color: var(--primary-900);
+  font-weight: var(--fw-bold);
 }
 
-.sidebar-section[data-section-name="tags"] {
-  display: none;
-}
-
+.sidebar-section[data-section-name="tags"],
 .sidebar-section[data-section-name="community"] .sidebar-more-section-links-details,
 .sidebar-section[data-section-name="community"] details.sidebar-more-section-links-details,
 .sidebar-section[data-section-name="community"] .sidebar-section-link[data-link-name="more"] {

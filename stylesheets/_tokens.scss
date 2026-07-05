@@ -1,25 +1,245 @@
 :root {
-  --bm-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    "Segoe UI", Arial, sans-serif;
-  --bm-mono: "SFMono-Regular", "SF Mono", "JetBrains Mono", ui-monospace, Menlo,
-    Consolas, monospace;
+  --primary-100: #b9c4cf;
+  --primary-200: #96a7b7;
+  --primary-300: #73899e;
+  --primary-400: #506c86;
+  --primary-500: #2d4e6e;
+  --primary-600: #26415c;
+  --primary-700: #1e3449;
+  --primary-800: #172737;
+  --primary-900: #0f1a25;
+  --primary-hover: #002f67;
+  --primary-disabled: #64798b;
+  --primary-tint-14: rgba(45, 78, 110, 0.14);
+  --primary-tint-26: rgba(45, 78, 110, 0.26);
+  --primary-tint-36: rgba(45, 78, 110, 0.36);
+  --primary-tint-90: rgba(45, 78, 110, 0.9);
 
-  --bm-paper: #fbfcfe;
-  --bm-card: #ffffff;
-  --bm-ink: #0e1b33;
-  --bm-ink-2: #1b2a4a;
-  --bm-navy: #1f3d6b;
-  --bm-accent: #2563a8;
-  --bm-accent-soft: #e8eef7;
-  --bm-slate: #5b6a86;
-  --bm-slate-2: #8a96ac;
-  --bm-rule: #e4e8f0;
-  --bm-rule-2: #cdd5e3;
-  --bm-gold: #c8a24b;
-  --bm-gold-soft: #f6efdd;
-  --bm-blue: #4d8fd6;
-  --bm-danger: #b0402c;
+  --grey-50: #fafafa;
+  --grey-100: #f1f1f1;
+  --grey-200: #d5d5d5;
+  --grey-300: #cccccc;
+  --grey-400: #aaaaaa;
+  --grey-500: #888888;
+  --grey-600: #707070;
+  --grey-700: #444444;
+  --grey-800: #272727;
+  --grey-900: #000000;
+  --white: #ffffff;
 
-  --bm-pad: clamp(20px, 4vw, 56px);
-  --d-border-radius: 6px;
+  --complementary-1: #126b87;
+  --complementary-2: #64798b;
+  --complementary-3: #2b6a8e;
+  --complementary-4: #66b9cc;
+
+  --success: #208b51;
+  --warning: #ffa600;
+  --error: #b10300;
+  --link: #0086df;
+  --information: #0086df;
+  --rate: #ffa600;
+  --coral: var(--primary-500);
+  --bg-error: #fff3f3;
+  --bg-warning: #fff7ed;
+  --bg-success: #ecf7f1;
+  --bg-info: #eaf4fd;
+
+  --bg-page: #ffffff;
+  --bg-subtle: #f1f1f1;
+  --bg-muted: #efefef;
+  --surface-dark: var(--primary-500);
+  --surface-panel: #ffffff;
+  --surface-panel-muted: #f6f8fb;
+  --surface-ghost: rgba(255, 255, 255, 0.08);
+  --input-disabled: #e8edf3;
+
+  --text-primary: #404040;
+  --text-heading: #000000;
+  --text-secondary: #888888;
+  --text-muted: #aaaaaa;
+  --text-hint: #888888;
+  --text-on-dark: #ffffff;
+  --text-brand: var(--primary-500);
+
+  --border-default: #aaaaaa;
+  --border-light: #d5d5d5;
+  --border-brand: var(--primary-500);
+  --border-error: var(--error);
+  --border-strong: var(--primary-700);
+
+  --font-primary: "IRANYekan", "Yekan Bakh", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-latin: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Inter", ui-monospace, monospace;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 36px;
+  --text-4xl: 40px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+
+  --leading-tight: 1;
+  --leading-snug: 1.375;
+  --leading-body: 1.6;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extra: 800;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 54px;
+
+  --size-icon: 24px;
+  --size-control-sm: 40px;
+  --size-control-md: 48px;
+  --size-header: 54px;
+  --size-sidebar-icon: 24px;
+
+  --chamfer-xs: 8px;
+  --chamfer-sm: 16px;
+  --chamfer: 24px;
+  --chamfer-lg: 32px;
+
+  --shadow-button: 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.12),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-knob: 0 2px 4px rgba(59, 59, 59, 0.25);
+  --shadow-card: 0 2px 14px rgba(0, 0, 0, 0.12);
+  --shadow-pop: 0 4px 24px rgba(0, 0, 0, 0.18);
+
+  --transition-fast: 200ms ease;
+  --transition-slow: 240ms ease;
+
+  /* Legacy aliases kept for theme compatibility */
+  --bm-paper: var(--bg-page);
+  --bm-card: var(--surface-panel);
+  --bm-ink: var(--primary-900);
+  --bm-ink-2: var(--primary-700);
+  --bm-navy: var(--primary-500);
+  --bm-accent: var(--coral);
+  --bm-accent-soft: var(--primary-tint-14);
+  --bm-slate: var(--text-secondary);
+  --bm-slate-2: var(--text-muted);
+  --bm-rule: var(--border-light);
+  --bm-rule-2: var(--border-default);
+  --bm-gold: var(--coral);
+  --bm-gold-soft: var(--primary-tint-14);
+  --bm-blue: var(--complementary-4);
+  --bm-danger: var(--error);
+  --bm-pad: var(--space-4);
+  --d-border-radius: 0;
+}
+
+@mixin chamfer($size: var(--chamfer)) {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{$size}), calc(100% - #{$size}) 100%, 0 100%);
+}
+
+@mixin chamfer-top-right($size: var(--chamfer)) {
+  clip-path: polygon(0 0, calc(100% - #{$size}) 0, 100% #{$size}, 100% 100%, 0 100%);
+}
+
+@mixin chamfer-outline($color: var(--border-light), $size: var(--chamfer), $width: 1px) {
+  position: relative;
+  border: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(#{$color}, #{$color}) top left / 100% #{$width} no-repeat,
+      linear-gradient(#{$color}, #{$color}) top left / #{$width} 100% no-repeat,
+      linear-gradient(#{$color}, #{$color}) top right / #{$width} calc(100% - #{$size} + #{$width}) no-repeat,
+      linear-gradient(#{$color}, #{$color}) bottom left / calc(100% - #{$size} + #{$width}) #{$width} no-repeat,
+      linear-gradient(
+        135deg,
+        transparent calc(50% - 0.5px),
+        #{$color} calc(50% - 0.5px),
+        #{$color} calc(50% + 0.5px),
+        transparent calc(50% + 0.5px)
+      )
+      bottom right / calc(#{$size} + #{$width}) calc(#{$size} + #{$width}) no-repeat;
+  }
+}
+
+@mixin panel-surface($padding: var(--space-3), $size: var(--chamfer)) {
+  @include chamfer($size);
+  @include chamfer-outline(var(--border-light), $size);
+  background: var(--surface-panel);
+  box-shadow: var(--shadow-card);
+  padding: $padding;
+}
+
+@mixin button-shell($height: var(--size-control-md), $padding: var(--space-3)) {
+  @include chamfer(var(--chamfer));
+  min-height: $height;
+  padding: 0 $padding;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  position: relative;
+  border: 0 !important;
+  border-radius: 0;
+  background: var(--btn-fill, var(--bg-page));
+  overflow: hidden;
+  box-shadow: var(--shadow-button);
+  transition: background var(--transition-fast), color var(--transition-fast),
+    box-shadow var(--transition-fast);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--btn-stroke, var(--primary-500)), var(--btn-stroke, var(--primary-500))) top left/100% 1px no-repeat,
+      linear-gradient(var(--btn-stroke, var(--primary-500)), var(--btn-stroke, var(--primary-500))) top left/1px 100% no-repeat,
+      linear-gradient(var(--btn-stroke, var(--primary-500)), var(--btn-stroke, var(--primary-500))) top right/1px calc(100% - var(--chamfer)) no-repeat,
+      linear-gradient(var(--btn-stroke, var(--primary-500)), var(--btn-stroke, var(--primary-500))) bottom left/calc(100% - var(--chamfer)) 1px no-repeat,
+      linear-gradient(135deg, transparent calc(50% - 1px), var(--btn-stroke, var(--primary-500)) calc(50% - 1px), var(--btn-stroke, var(--primary-500)) calc(100% + 1px), transparent calc(100% + 1px)) bottom right/var(--chamfer) var(--chamfer) no-repeat;
+  }
+}
+
+.chamfer {
+  @include chamfer(var(--chamfer));
+}
+
+.chamfer-sm {
+  @include chamfer(var(--chamfer-sm));
+}
+
+.chamfer-xs {
+  @include chamfer(var(--chamfer-xs));
+}
+
+.chamfer-lg {
+  @include chamfer(var(--chamfer-lg));
+}
+
+.chamfer-tr {
+  @include chamfer-top-right(var(--chamfer));
+}
+
+.als-icon {
+  width: var(--size-icon);
+  height: var(--size-icon);
+  stroke: currentColor;
+  stroke-width: 1.75;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+  display: inline-block;
 }

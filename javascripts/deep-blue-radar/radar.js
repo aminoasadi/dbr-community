@@ -1,5 +1,6 @@
 import {
   el,
+  renderIcon,
   safeLocalStorageGet,
   safeLocalStorageRemove,
   safeLocalStorageSet,
@@ -12,11 +13,6 @@ const DEFAULT_VERBS = [
   { verb: "REPORT", line: "Help us discover continuity patterns." },
   { verb: "MAKE", line: "Make your own blue radar." },
 ];
-
-const PLAY_ICON =
-  '<svg class="dbr-audio-ico" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1 L9 5 L2 9 Z"/></svg>';
-const PAUSE_ICON =
-  '<svg class="dbr-audio-ico" viewBox="0 0 10 10" aria-hidden="true"><rect x="1.5" y="1" width="2.3" height="8"/><rect x="6.2" y="1" width="2.3" height="8"/></svg>';
 
 function setupRadar() {}
 
@@ -90,9 +86,14 @@ function syncAudioButtons() {
   const playing = !!audio && !audio.paused;
 
   document.querySelectorAll(".dbr-radar__audio").forEach((button) => {
-    button.innerHTML =
-      (playing ? PAUSE_ICON : PLAY_ICON) +
-      `<span>${playing ? "Pause signal" : "Play signal"}</span>`;
+    button.innerHTML = "";
+    button.append(
+      renderIcon(playing ? "pause" : "play", {
+        class: "als-icon dbr-audio-ico",
+        label: playing ? "Pause signal" : "Play signal",
+      }),
+      el("span", { text: playing ? "Pause signal" : "Play signal" })
+    );
     button.setAttribute("aria-pressed", playing ? "true" : "false");
   });
 }

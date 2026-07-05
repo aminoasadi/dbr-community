@@ -1,19 +1,20 @@
 .btn {
-  border-radius: var(--d-border-radius);
-  font-family: var(--bm-mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: 1px solid var(--bm-rule-2);
-  background: var(--bm-card);
-  color: var(--bm-ink-2);
-  box-shadow: none;
+  @include button-shell();
+  --btn-fill: var(--bg-page);
+  --btn-stroke: var(--primary-500);
+  color: var(--primary-500);
+  font-size: var(--text-base);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px var(--primary-500), var(--shadow-button);
+  white-space: nowrap;
+  user-select: none;
 }
 
 .btn:hover {
-  background: var(--bm-accent-soft);
-  color: var(--bm-ink);
+  --btn-fill: var(--bg-subtle);
+  --btn-stroke: var(--primary-500);
+  color: var(--primary-500);
 }
 
 .btn .d-icon {
@@ -22,44 +23,51 @@
 
 .btn-primary,
 .btn-primary:hover {
-  background: var(--bm-ink);
-  border-color: var(--bm-ink);
-  color: #fff;
+  --btn-fill: var(--primary-500);
+  --btn-stroke: var(--primary-500);
+  color: var(--text-on-dark);
+  box-shadow: var(--shadow-button);
 }
 
 .btn-primary:hover {
-  background: var(--bm-navy);
-  border-color: var(--bm-navy);
+  --btn-fill: var(--primary-hover);
+  --btn-stroke: var(--primary-hover);
 }
 
 .btn-danger {
-  background: var(--bm-danger);
-  border-color: var(--bm-danger);
-  color: #fff;
+  --btn-fill: var(--error);
+  --btn-stroke: var(--error);
+  color: var(--text-on-dark);
+  box-shadow: var(--shadow-button);
 }
 
 #create-topic {
-  background: var(--bm-accent);
-  border-color: var(--bm-accent);
-  color: #fff;
+  --btn-fill: var(--primary-500);
+  --btn-stroke: var(--primary-500);
+  color: var(--text-on-dark);
+  box-shadow: var(--shadow-button);
 }
 
 #create-topic:hover {
-  background: var(--bm-ink);
-  border-color: var(--bm-ink);
+  --btn-fill: var(--primary-hover);
+  --btn-stroke: var(--primary-hover);
 }
 
 .nav-pills > li > a {
   @extend %bm-label;
-  border-radius: 6px;
+  min-height: var(--size-control-sm);
+  padding: 0 var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
 }
 
 .nav-pills > li > a.active,
 .nav-pills > li > a:hover {
-  background: var(--bm-ink);
-  color: #fff;
-}
-
-.nav-pills > li > a.active {
-  color: #fff;
+  @include chamfer(var(--chamfer-sm));
+  background: var(--primary-500);
+  color: var(--text-on-dark);
+  border-color: var(--primary-500);
 }

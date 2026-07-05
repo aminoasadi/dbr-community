@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Theme Preview</title>
+    <link rel="stylesheet" href="./theme.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .preview-shell {
+        min-height: 100vh;
+        background: var(--bg-page);
+      }
+
+      .preview-main {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        min-height: calc(100vh - var(--size-header));
+      }
+
+      .preview-sidebar {
+        padding: var(--space-3);
+      }
+
+      .preview-content {
+        padding: 0;
+      }
+
+      .preview-section {
+        padding: var(--space-4);
+      }
+
+      .preview-stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+      }
+
+      .preview-panel {
+        background: var(--surface-panel);
+      }
+
+      .preview-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+      }
+
+      .preview-composer {
+        max-width: 920px;
+      }
+
+      .preview-auth {
+        background: var(--primary-900);
+        padding: var(--space-4);
+      }
+
+      .preview-auth .dbr-radar__scope {
+        width: min(420px, 80vw);
+      }
+
+      .preview-topic-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--space-3);
+      }
+
+      .preview-input {
+        width: 100%;
+      }
+
+      @media (max-width: 900px) {
+        .preview-main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-shell">
+      <header class="d-header">
+        <div class="wrap">
+          <div class="contents">
+            <div class="title">
+              <a href="/">ALIASYS</a>
+            </div>
+            <div class="d-header-icons">
+              <button class="icon">Search</button>
+              <button class="icon">Menu</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="preview-main">
+        <aside class="sidebar-wrapper preview-sidebar">
+          <div class="sidebar-section" data-section-name="community">
+            <div class="sidebar-section-header-text">Community</div>
+            <a class="sidebar-section-link active" href="#">
+              <span class="sidebar-section-link-content-text">House Home</span>
+            </a>
+            <a class="sidebar-section-link" href="#">
+              <span class="sidebar-section-link-content-text">Events</span>
+            </a>
+          </div>
+          <div class="sidebar-section" data-section-name="categories">
+            <div class="sidebar-section-header-text">Collections &amp; Spaces</div>
+            <a class="sidebar-section-link" href="#">
+              <span class="sidebar-section-link-content-text">Continuity Radar</span>
+            </a>
+            <a class="sidebar-section-link" href="#">
+              <span class="sidebar-section-link-content-text">Storage</span>
+            </a>
+          </div>
+        </aside>
+
+        <main class="preview-content">
+          <section class="bm-hero">
+            <div class="bm-hero__eyebrow">ALIASYS DESIGN SYSTEM</div>
+            <h1 class="bm-hero__title">Enterprise community front, standardized.</h1>
+            <p class="bm-hero__sub">
+              Header, sidebar, topic cards, auth experience, and composer surfaces aligned with
+              ALIASYS tokens, chamfer geometry, and spacing rules.
+            </p>
+            <div class="bm-hero__stats">
+              <div class="bm-hero__stat"><b>24</b><span>Spaces</span></div>
+              <div class="bm-hero__stat"><b>1.2k</b><span>Members</span></div>
+              <div class="bm-hero__stat"><b>846</b><span>Topics</span></div>
+            </div>
+          </section>
+
+          <section class="preview-section">
+            <div class="bm-section-head">
+              <h2>Actions</h2>
+              <span class="bm-section-meta">Buttons / Inputs / Controls</span>
+            </div>
+            <div class="preview-stack">
+              <div class="preview-actions">
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn">Secondary</button>
+                <button class="btn btn-danger">Danger</button>
+                <button id="create-topic" class="btn">Create Topic</button>
+              </div>
+              <div class="preview-topic-grid">
+                <input class="preview-input" type="text" placeholder="Topic title" />
+                <input class="preview-input" type="email" placeholder="Email address" />
+              </div>
+            </div>
+          </section>
+
+          <section class="preview-section">
+            <div class="bm-section-head">
+              <h2>Topic Cards</h2>
+              <span class="bm-section-meta">Feed / rail / profile</span>
+            </div>
+            <div class="bm-home__grid">
+              <div class="preview-stack">
+                <a class="bm-post" href="#">
+                  <img class="bm-post__avatar" src="https://placehold.co/48x48" alt="" />
+                  <div class="bm-post__body">
+                    <span class="bm-post__title">
+                      <span class="bm-type bm-type--pattern">Pattern</span>
+                      Storage failover pattern for branch resiliency
+                    </span>
+                    <div class="bm-post__meta">
+                      <span class="bm-post__space">Continuity Radar</span>
+                      <span class="bm-post__dot">·</span>
+                      <span class="bm-post__num"><b>@aliasys</b></span>
+                      <span class="bm-post__dot">·</span>
+                      <span class="bm-post__num">4h</span>
+                    </div>
+                  </div>
+                  <div class="bm-post__stats">
+                    <div class="bm-post__stat"><b>18</b><span>Replies</span></div>
+                    <div class="bm-post__stat"><b>72</b><span>Likes</span></div>
+                  </div>
+                </a>
+
+                <div class="preview-topic-grid">
+                  <article class="category-box">
+                    <h3><a href="#">Processing</a></h3>
+                    <p class="category-box-description">Enterprise compute threads, field notes, and validated deployment patterns.</p>
+                    <div class="stats">42 TOPICS</div>
+                  </article>
+                  <article class="category-box">
+                    <h3><a href="#">Security</a></h3>
+                    <p class="category-box-description">Identity, network defense, and operations alignment for resilient infrastructure.</p>
+                    <div class="stats">31 TOPICS</div>
+                  </article>
+                </div>
+              </div>
+
+              <aside class="bm-rail">
+                <div class="bm-profilecard">
+                  <a class="bm-profile-head" href="#">
+                    <img class="bm-profile-avatar" src="https://placehold.co/48x48" alt="" />
+                    <div class="bm-profile-id">
+                      <div class="bm-profile-name">Aliasys Team</div>
+                      <div class="bm-profile-handle">@aliasys</div>
+                    </div>
+                  </a>
+                  <div class="bm-profile-stats">
+                    <div class="bm-profile-stat"><b>142</b><span>Posts</span></div>
+                    <div class="bm-profile-stat"><b>860</b><span>Likes</span></div>
+                    <div class="bm-profile-stat"><b>214</b><span>Days</span></div>
+                  </div>
+                </div>
+
+                <div class="bm-leaderboard">
+                  <div class="bm-leaderboard__head">
+                    <h3>Engagement Leaderboard</h3>
+                    <a href="#">View All</a>
+                  </div>
+                  <a class="bm-lb-row" data-rank="1" href="#">
+                    <span class="bm-lb-rank">1</span>
+                    <img class="bm-lb-avatar" src="https://placehold.co/40x40" alt="" />
+                    <span class="bm-lb-name">Infrastructure Lead<small>@infra</small></span>
+                    <span class="bm-lb-score">980<span>pts</span></span>
+                  </a>
+                  <a class="bm-lb-row" data-rank="2" href="#">
+                    <span class="bm-lb-rank">2</span>
+                    <img class="bm-lb-avatar" src="https://placehold.co/40x40" alt="" />
+                    <span class="bm-lb-name">Security Desk<small>@secops</small></span>
+                    <span class="bm-lb-score">812<span>pts</span></span>
+                  </a>
+                </div>
+              </aside>
+            </div>
+          </section>
+
+          <section class="preview-section preview-auth">
+            <div class="dbr-header">
+              <a class="dbr-brand" href="#">
+                <span class="dbr-wordmark">ALIASYS</span>
+                <span class="dbr-tagline">YOUR TRUSTED TECH PARTNER.</span>
+              </a>
+              <div class="dbr-status">SYSTEMS IN THE BLUE</div>
+            </div>
+            <div class="preview-stack" style="align-items:center; margin-top: var(--space-4);">
+              <div class="dbr-radar">
+                <div class="dbr-radar__scope">
+                  <div class="dbr-radar__disc">
+                    <div class="dbr-radar__sweep"></div>
+                  </div>
+                  <div class="dbr-radar__overlay">
+                    <div class="dbr-eyebrow">DEEP BLUE RADAR</div>
+                    <h2 class="dbr-headline">JOIN THE TECHNICAL SIGNAL ROOM.</h2>
+                    <p class="dbr-sub">Enterprise-grade auth shell with standardized ALIASYS geometry and typography.</p>
+                    <div class="dbr-kicker">REQUEST ACCESS</div>
+                  </div>
+                </div>
+                <button class="dbr-radar__audio"><span>Play signal</span></button>
+              </div>
+              <div class="login-body">
+                <div class="login-welcome-header">
+                  <h1 class="login-title">Sign in</h1>
+                </div>
+                <div class="preview-stack">
+                  <input class="preview-input" type="text" placeholder="Username" />
+                  <input class="preview-input" type="password" placeholder="Password" />
+                  <button class="btn btn-primary">Continue</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="preview-section">
+            <div class="bm-section-head">
+              <h2>Composer</h2>
+              <span class="bm-section-meta">Editor shell</span>
+            </div>
+            <div class="preview-composer preview-stack">
+              <div class="composer-popup">
+                <div class="composer-fields">
+                  <input class="preview-input" type="text" placeholder="Composer title" />
+                </div>
+                <div class="d-editor-container">
+                  <div class="d-editor-button-bar">
+                    <button class="btn">Bold</button>
+                    <button class="btn">Link</button>
+                    <button class="btn">Quote</button>
+                  </div>
+                  <textarea class="d-editor-input" rows="6" placeholder="Write your content..."></textarea>
+                </div>
+                <div class="composer-controls preview-actions">
+                  <button class="btn btn-primary">Publish</button>
+                  <button class="btn">Save Draft</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 #main-outlet-wrapper {
   max-width: none;
+  background: var(--bg-page);
 }
 
 .d-header-wrap + #main-outlet-wrapper {
@@ -8,9 +9,8 @@
 
 #main-outlet {
   max-width: none;
-  padding-left: var(--bm-pad);
-  padding-right: var(--bm-pad);
-  padding-bottom: 80px;
+  padding: var(--space-4);
+  padding-bottom: var(--space-6);
 }
 
 .wrap,
@@ -20,21 +20,31 @@
 }
 
 .list-controls {
-  margin: 0 calc(var(--bm-pad) * -1);
-  padding: 12px var(--bm-pad);
-  border-bottom: 1px solid var(--bm-rule);
-  background: var(--bm-paper);
+  margin: 0 calc(var(--space-4) * -1);
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-page);
 }
 
 .fk-d-menu__inner-content,
-.menu-panel {
-  border-radius: 10px;
+.menu-panel,
+.select-kit .select-kit-body {
+  @include panel-surface(var(--space-2), var(--chamfer-sm));
 }
 
 .badge-notification {
-  background: var(--bm-accent);
+  background: var(--coral);
 }
 
 hr {
-  border-color: var(--bm-rule);
+  border-color: var(--border-light);
+}
+
+.bm-home,
+.bm-feedhome,
+body.dbr-auth {
+  background:
+    linear-gradient(90deg, rgba(45, 78, 110, 0.03) 0, rgba(45, 78, 110, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(45, 78, 110, 0.03) 0, rgba(45, 78, 110, 0.03) 1px, transparent 1px);
+  background-size: var(--space-4) var(--space-4);
 }

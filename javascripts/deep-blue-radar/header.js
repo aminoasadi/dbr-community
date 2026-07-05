@@ -3,6 +3,7 @@ import { createThemeContext, registerEnhancer } from "./helpers";
 function applyBranding(context) {
   try {
     const root = document.documentElement;
+    root.dataset.mode = "dark";
 
     if (context.cfg.brand_wordmark) {
       root.style.setProperty("--bm-wordmark", JSON.stringify(context.cfg.brand_wordmark));
