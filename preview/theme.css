@@ -2076,6 +2076,34 @@ body.signup-page h1.login-title {
   box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06) !important;
 }
 
+.bm-grid .topic-list-item,
+.bm-post,
+.bm-leaderboard,
+.bm-railcard,
+.bm-profilecard,
+.category-box,
+.subcategory-list-item {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.bm-grid .topic-list-item::after,
+.bm-post::after,
+.bm-leaderboard::after,
+.bm-railcard::after,
+.bm-profilecard::after,
+.category-box::after,
+.subcategory-list-item::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: -1px;
+  bottom: -1px;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  background: linear-gradient(135deg, transparent 0 47%, #123049 48% 51%, #071a2c 52% 100%);
+}
+
 .topic-list .title,
 .latest-topic-list-item .title,
 .bm-post__title,
