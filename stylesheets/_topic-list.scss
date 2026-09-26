@@ -377,12 +377,11 @@
   position: absolute;
   inset-inline-start: 0;
   bottom: 0;
-  width: var(--chamfer);
-  height: var(--chamfer);
+  width: 28px;
+  height: 28px;
   pointer-events: none;
   background: var(--bg-page);
   clip-path: polygon(0 0, 0 100%, 100% 100%);
-  clip-path: path("M 0 0 C 4 12 16 24 28 28 L 0 28 Z");
   z-index: 1;
 }
 
