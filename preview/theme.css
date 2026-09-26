@@ -1004,17 +1004,38 @@ html[lang=fa] select {
   border: 0;
 }
 
-.bm-grid .topic-list-item {
-  display: flex;
-  flex-direction: column;
+.bm-grid .topic-list-item,
+.bm-grid .latest-topic-list-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto repeat(3, minmax(44px, auto));
+  align-items: center;
   gap: var(--space-2);
+  min-height: 96px;
+  padding: var(--space-2);
+  border: 0;
 }
 
-.bm-grid .topic-list-item > td {
+.bm-grid .topic-list-item > td,
+.bm-grid .latest-topic-list-item > td {
   display: block;
   padding: 0;
   border: 0;
   width: auto !important;
+}
+
+.bm-grid .topic-list-item .posters,
+.bm-grid .latest-topic-list-item .posters {
+  min-width: 32px;
+}
+
+.bm-grid .topic-list-item .posts,
+.bm-grid .topic-list-item .views,
+.bm-grid .topic-list-item .activity,
+.bm-grid .latest-topic-list-item .posts,
+.bm-grid .latest-topic-list-item .views,
+.bm-grid .latest-topic-list-item .activity {
+  min-width: 44px;
+  text-align: center;
 }
 
 .bm-grid .topic-list-item .main-link::before {
@@ -1038,18 +1059,20 @@ html[lang=fa] select {
   background: var(--surface-panel);
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(14px) saturate(125%);
-  padding: var(--space-3);
+  padding: var(--space-2);
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
   align-items: center;
   gap: var(--space-2);
   text-decoration: none;
   position: relative;
+  min-height: 96px;
+  border: 0;
 }
 
 .bm-post__avatar {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   border-radius: 999px;
 }
 
@@ -1074,14 +1097,18 @@ html[lang=fa] select {
 }
 
 .bm-post__stats {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(44px, auto));
+  align-items: center;
   gap: var(--space-2);
 }
 
 .bm-post__stat {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
 }
 
 .bm-post__stat b {
@@ -1814,12 +1841,15 @@ body.signup-page h1.login-title {
   }
 }
 @media (max-width: 640px) {
-  .bm-post,
   .bm-grid .topic-list-body,
   .bm-feed.is-grid .bm-feed__list {
     grid-template-columns: 1fr;
   }
+  .bm-post {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
   .bm-post__stats {
+    grid-column: 1/-1;
     justify-content: flex-start;
   }
   .topic-list td,
@@ -2064,7 +2094,6 @@ body.signup-page h1.login-title {
 
 .topic-list-item,
 .latest-topic-list-item,
-.bm-post,
 .bm-leaderboard,
 .bm-railcard,
 .bm-profilecard,
@@ -2075,6 +2104,19 @@ body.signup-page h1.login-title {
   background: rgba(11, 35, 56, 0.88) !important;
   border-color: #123049 !important;
   box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06) !important;
+}
+
+.bm-post {
+  color: #d6dee4 !important;
+  background: rgba(11, 35, 56, 0.88) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.bm-grid .topic-list-item,
+.bm-grid .latest-topic-list-item {
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 .bm-grid .topic-list-item,
@@ -2089,7 +2131,6 @@ body.signup-page h1.login-title {
 }
 
 .bm-grid .topic-list-item::after,
-.bm-post::after,
 .bm-leaderboard::after,
 .bm-railcard::after,
 .bm-profilecard::after,
@@ -2103,6 +2144,15 @@ body.signup-page h1.login-title {
   height: 32px;
   pointer-events: none;
   background: linear-gradient(315deg, transparent 0 50%, #071a2c 51% 100%);
+}
+
+.bm-post::after {
+  content: none !important;
+}
+
+.bm-grid .topic-list-item::after,
+.bm-grid .latest-topic-list-item::after {
+  content: none !important;
 }
 
 .topic-list .title,
@@ -2539,7 +2589,7 @@ html[dir=rtl] textarea {
   justify-content: flex-start !important;
   gap: 8px !important;
   padding: 0 8px !important;
-  border-bottom: 1px solid #123049 !important;
+  border-bottom: 0 !important;
 }
 
 .sidebar-section button.sidebar-more-section-trigger,
@@ -2582,7 +2632,7 @@ html[dir=rtl] textarea {
 .sidebar-section .sidebar-more-section-links-details-summary[aria-expanded=true],
 .sidebar-section .sidebar-more-section-links-details-summary[aria-current=page] {
   border: 0 !important;
-  border-bottom: 1px solid #123049 !important;
+  border-bottom: 0 !important;
   border-radius: 0 !important;
   outline: 0 !important;
   background: transparent !important;
@@ -2603,6 +2653,13 @@ html[dir=rtl] textarea {
 .sidebar-section .sidebar-more-section-links-details-summary.is-active,
 .sidebar-section .sidebar-more-section-links-details-summary[aria-expanded=true],
 .sidebar-section .sidebar-more-section-links-details-summary[aria-current=page] {
+  border-bottom: 0 !important;
+}
+
+.sidebar-section .sidebar-section-header,
+.sidebar-section .sidebar-section-header-collapsable,
+.sidebar-section .sidebar-more-section-trigger,
+.sidebar-section .sidebar-more-section-links-details-summary {
   border-bottom: 0 !important;
 }
 

@@ -39,13 +39,17 @@
 }
 
 @media (max-width: 640px) {
-  .bm-post,
   .bm-grid .topic-list-body,
   .bm-feed.is-grid .bm-feed__list {
     grid-template-columns: 1fr;
   }
 
+  .bm-post {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+
   .bm-post__stats {
+    grid-column: 1 / -1;
     justify-content: flex-start;
   }
 
