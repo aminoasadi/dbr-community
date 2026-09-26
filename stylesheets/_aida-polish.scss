@@ -82,11 +82,11 @@
       rgba(4, 16, 28, 0.5) 48%,
       rgba(4, 16, 28, 0.8) 100%
     ),
-    url($dbr_hero_technocrat) center 36% / cover no-repeat !important;
-  border: 1px solid #123049 !important;
+    url($dbr_hero_technocrat) center 12% / cover no-repeat !important;
+  border: 0 !important;
   border-radius: 12px !important;
   box-shadow: none !important;
-  font-size: clamp(48px, 8vw, 112px) !important;
+  font-size: clamp(28px, 4.8vw, 72px) !important;
   font-weight: 800 !important;
   line-height: 1.05 !important;
   letter-spacing: 0 !important;
@@ -127,7 +127,8 @@
   position: relative;
   z-index: 2;
   display: block;
-  max-width: min(980px, 100%);
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .d-header {
