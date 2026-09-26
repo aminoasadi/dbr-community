@@ -340,9 +340,35 @@
 
 .btn-primary[data-aida-fillet],
 #create-topic[data-aida-fillet] {
-  color: var(--dbr-ink);
-  background: var(--dbr-chrome-0);
+  color: #071a2c !important;
+  background: var(--dbr-chrome-0) !important;
   box-shadow: inset 0 0 0 1px var(--dbr-chrome-0) !important;
+}
+
+.btn-primary,
+.btn-primary[disabled],
+.btn-primary.disabled,
+#create-topic,
+#create-topic[disabled],
+#create-topic.disabled,
+.btn-primary[data-aida-fillet],
+.btn-primary[data-aida-fillet][disabled],
+.btn-primary[data-aida-fillet].disabled,
+#create-topic[data-aida-fillet],
+#create-topic[data-aida-fillet][disabled],
+#create-topic[data-aida-fillet].disabled {
+  color: #071a2c !important;
+  opacity: 1 !important;
+}
+
+.btn-primary .d-icon,
+.btn-primary .d-button-label,
+.btn-primary span,
+#create-topic .d-icon,
+#create-topic .d-button-label,
+#create-topic span {
+  color: #071a2c !important;
+  opacity: 1 !important;
 }
 
 .btn[data-aida-fillet]:hover,
@@ -354,8 +380,8 @@
 
 .btn-primary[data-aida-fillet]:hover,
 #create-topic[data-aida-fillet]:hover {
-  color: var(--dbr-ink);
-  background: var(--dbr-chrome-1);
+  color: #071a2c !important;
+  background: var(--dbr-chrome-1) !important;
 }
 
 .btn:focus-visible,
