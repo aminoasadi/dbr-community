@@ -240,13 +240,13 @@
   content: "";
   position: absolute;
   inset-inline-start: -1px;
-  bottom: -1px;
-  width: 34px;
-  height: 34px;
+  top: -1px;
+  width: 32px;
+  height: 32px;
   pointer-events: none;
   background:
     linear-gradient(
-      135deg,
+      315deg,
       transparent 0 47%,
       #123049 48% 51%,
       #071a2c 52% 100%
