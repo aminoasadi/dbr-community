@@ -2476,5 +2476,74 @@ html[dir=rtl] textarea {
     min-width: 112px;
   }
 }
+.sidebar-section button.sidebar-section-header,
+.sidebar-section .sidebar-section-header.btn,
+.sidebar-section .sidebar-section-header.btn-transparent,
+.sidebar-section .sidebar-section-header-collapsable,
+.sidebar-section summary.sidebar-more-section-links-details-summary,
+.sidebar-section .sidebar-more-section-links-details-summary,
+.sidebar-section button.sidebar-more-section-trigger,
+.sidebar-section .fk-d-menu__trigger.sidebar-more-section-trigger,
+.sidebar-section .sidebar-more-section-trigger.sidebar-section-link,
+.sidebar-section .sidebar-section-link[data-link-name=more] {
+  appearance: none !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-inline: 0 !important;
+  border-block: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  transform: none !important;
+}
+
+.sidebar-section button.sidebar-section-header,
+.sidebar-section .sidebar-section-header.btn,
+.sidebar-section .sidebar-section-header.btn-transparent,
+.sidebar-section .sidebar-section-header-collapsable {
+  flex: 1 1 auto !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  padding: 0 10px !important;
+  border-bottom: 1px solid #123049 !important;
+}
+
+.sidebar-section button.sidebar-more-section-trigger,
+.sidebar-section .fk-d-menu__trigger.sidebar-more-section-trigger,
+.sidebar-section .sidebar-more-section-links-details-summary {
+  flex: 0 0 32px !important;
+  width: 32px !important;
+  min-width: 32px !important;
+  padding: 0 !important;
+  justify-content: center !important;
+}
+
+.sidebar-section .sidebar-section-header::before,
+.sidebar-section .sidebar-section-header::after,
+.sidebar-section .sidebar-more-section-trigger::before,
+.sidebar-section .sidebar-more-section-trigger::after,
+.sidebar-section .sidebar-more-section-links-details-summary::before,
+.sidebar-section .sidebar-more-section-links-details-summary::after {
+  display: none !important;
+  content: none !important;
+}
+
+.sidebar-section .sidebar-section-header:hover,
+.sidebar-section .sidebar-section-header:focus-visible,
+.sidebar-section .sidebar-more-section-trigger:hover,
+.sidebar-section .sidebar-more-section-trigger:focus-visible,
+.sidebar-section .sidebar-more-section-links-details-summary:hover,
+.sidebar-section .sidebar-more-section-links-details-summary:focus-visible {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #f4f7f9 !important;
+}
 
 /*# sourceMappingURL=theme.css.map */
