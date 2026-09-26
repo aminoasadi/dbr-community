@@ -865,3 +865,134 @@ body.admin-interface [class*="admin-sidebar"] .btn {
   box-shadow: none !important;
   clip-path: none !important;
 }
+
+// Some admin routes mount the sidebar in an app-level drawer instead of adding
+// `admin-interface` to body. Target those native admin wrappers directly.
+.admin-sidebar,
+.admin-sidebar-wrapper,
+.admin-sidebar__wrapper,
+.admin-sidebar-container,
+.admin-sidebar__container,
+.admin-sidebar-content,
+.admin-sidebar__content,
+.admin-sidebar-nav,
+.admin-nav-sidebar,
+.admin-menu,
+.admin-menu-panel,
+.admin-navigation,
+.admin-section-nav,
+.admin-config-nav,
+.admin-main-nav,
+.admin-drawer,
+.admin-drawer__content,
+.admin-panel,
+.admin-panel-sidebar,
+.admin-area .sidebar,
+.admin-container .sidebar,
+.admin-config-area .sidebar,
+.admin-interface .sidebar,
+.admin-interface [class*="sidebar"],
+[class*="admin-sidebar"],
+[class*="admin-nav-sidebar"] {
+  color: #d6dee4 !important;
+  background: #071a2c !important;
+  background-color: #071a2c !important;
+  border-color: #123049 !important;
+  box-shadow: inset -1px 0 0 #123049 !important;
+}
+
+.admin-sidebar *,
+.admin-sidebar-wrapper *,
+.admin-sidebar__wrapper *,
+.admin-sidebar-container *,
+.admin-sidebar__container *,
+.admin-sidebar-content *,
+.admin-sidebar__content *,
+.admin-sidebar-nav *,
+.admin-nav-sidebar *,
+.admin-menu *,
+.admin-menu-panel *,
+.admin-navigation *,
+.admin-section-nav *,
+.admin-config-nav *,
+.admin-main-nav *,
+.admin-drawer *,
+.admin-drawer__content *,
+.admin-panel-sidebar *,
+[class*="admin-sidebar"] *,
+[class*="admin-nav-sidebar"] * {
+  border-color: #123049 !important;
+}
+
+.admin-sidebar a,
+.admin-sidebar button,
+.admin-sidebar input,
+.admin-sidebar-wrapper a,
+.admin-sidebar-wrapper button,
+.admin-sidebar-wrapper input,
+.admin-sidebar__wrapper a,
+.admin-sidebar__wrapper button,
+.admin-sidebar__wrapper input,
+.admin-sidebar-nav a,
+.admin-sidebar-nav button,
+.admin-nav-sidebar a,
+.admin-nav-sidebar button,
+.admin-menu a,
+.admin-menu button,
+.admin-navigation a,
+.admin-navigation button,
+.admin-section-nav a,
+.admin-section-nav button,
+.admin-config-nav a,
+.admin-config-nav button,
+.admin-drawer a,
+.admin-drawer button,
+[class*="admin-sidebar"] a,
+[class*="admin-sidebar"] button,
+[class*="admin-sidebar"] input {
+  color: #d6dee4 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.admin-sidebar input,
+.admin-sidebar-wrapper input,
+.admin-sidebar__wrapper input,
+[class*="admin-sidebar"] input {
+  background-color: #04101c !important;
+  border-color: #1d4667 !important;
+}
+
+.admin-sidebar a.active,
+.admin-sidebar button.active,
+.admin-sidebar a:hover,
+.admin-sidebar button:hover,
+.admin-sidebar-wrapper a.active,
+.admin-sidebar-wrapper button.active,
+.admin-sidebar-wrapper a:hover,
+.admin-sidebar-wrapper button:hover,
+.admin-sidebar__wrapper a.active,
+.admin-sidebar__wrapper button.active,
+.admin-sidebar__wrapper a:hover,
+.admin-sidebar__wrapper button:hover,
+.admin-sidebar-nav a.active,
+.admin-sidebar-nav button.active,
+.admin-sidebar-nav a:hover,
+.admin-sidebar-nav button:hover,
+.admin-nav-sidebar a.active,
+.admin-nav-sidebar button.active,
+.admin-nav-sidebar a:hover,
+.admin-nav-sidebar button:hover,
+.admin-menu a.active,
+.admin-menu button.active,
+.admin-menu a:hover,
+.admin-menu button:hover,
+[class*="admin-sidebar"] a.active,
+[class*="admin-sidebar"] button.active,
+[class*="admin-sidebar"] a:hover,
+[class*="admin-sidebar"] button:hover,
+[class*="admin-sidebar"] [aria-current="page"] {
+  color: #f4f7f9 !important;
+  background-color: #12314a !important;
+  border-color: #1d4667 !important;
+}
