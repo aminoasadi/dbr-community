@@ -9,7 +9,8 @@
   "maximum_discourse_version": null,
   "assets": {
     "iranyekanx_regular": "assets/IRANYekanX-Regular.woff2",
-    "iranyekanx_bold": "assets/IRANYekanX-Bold.woff2"
+    "iranyekanx_bold": "assets/IRANYekanX-Bold.woff2",
+    "dbr_hero_technocrat": "assets/dbr-hero-technocrat.webp"
   },
   "color_schemes": {
     "City Inbox Navy": {

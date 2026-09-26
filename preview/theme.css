@@ -1979,6 +1979,63 @@ body.signup-page h1.login-title {
   box-shadow: none !important;
 }
 
+.dbr-welcome-title {
+  width: 100% !important;
+  min-height: clamp(340px, 52vh, 620px);
+  margin: 0 auto var(--space-5) !important;
+  padding: clamp(40px, 7vw, 88px) var(--space-4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  color: #f4f7f9 !important;
+  background: linear-gradient(90deg, rgba(4, 16, 28, 0.88) 0%, rgba(4, 16, 28, 0.5) 48%, rgba(4, 16, 28, 0.8) 100%), url("assets/dbr-hero-technocrat.webp") center 36%/cover no-repeat !important;
+  border: 1px solid #123049 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  font-size: clamp(48px, 8vw, 112px) !important;
+  font-weight: 800 !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  text-shadow: 0 2px 24px rgba(4, 16, 28, 0.72);
+}
+
+.dbr-welcome-title::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 44px;
+  height: 44px;
+  pointer-events: none;
+  background: var(--bg-page);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  z-index: 1;
+}
+
+.dbr-welcome-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 32%, rgba(214, 222, 228, 0.16), transparent 32%), linear-gradient(180deg, transparent 0%, rgba(4, 16, 28, 0.62) 100%);
+  z-index: 1;
+}
+
+.dbr-welcome-title {
+  isolation: isolate;
+}
+
+.dbr-welcome-title__text {
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: min(980px, 100%);
+}
+
 .d-header {
   height: 64px !important;
   box-shadow: none !important;
