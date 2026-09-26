@@ -2102,7 +2102,7 @@ body.signup-page h1.login-title {
   width: 32px;
   height: 32px;
   pointer-events: none;
-  background: linear-gradient(315deg, transparent 0 47%, #123049 48% 51%, #071a2c 52% 100%);
+  background: linear-gradient(315deg, transparent 0 50%, #071a2c 51% 100%);
 }
 
 .topic-list .title,
