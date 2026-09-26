@@ -608,7 +608,7 @@ html[lang=fa] select {
 
 .sidebar-wrapper {
   background: var(--dbr-abyss);
-  border-inline-end: 1px solid var(--dbr-grid-2);
+  border-inline-end: 0;
 }
 
 .sidebar-section-header-text,
@@ -861,8 +861,7 @@ html[lang=fa] select {
   position: relative;
 }
 
-.topic-list-item .main-link::before,
-.bm-post::before {
+.topic-list-item .main-link::before {
   content: "";
   position: absolute;
   inset-inline-start: 0;
@@ -1013,6 +1012,31 @@ html[lang=fa] select {
   min-height: 96px;
   padding: var(--space-2);
   border: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bm-grid .topic-list-item::before,
+.bm-grid .latest-topic-list-item::before,
+.bm-post::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: var(--chamfer);
+  height: var(--chamfer);
+  pointer-events: none;
+  background: var(--bg-page);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  clip-path: path("M 0 0 C 4 12 16 24 28 28 L 0 28 Z");
+  z-index: 1;
+}
+
+.bm-grid .topic-list-item > *,
+.bm-grid .latest-topic-list-item > *,
+.bm-post > * {
+  position: relative;
+  z-index: 2;
 }
 
 .bm-grid .topic-list-item > td,
@@ -2890,6 +2914,197 @@ body.admin-interface [class*=admin-sidebar] .btn {
   color: #f4f7f9 !important;
   background-color: #12314a !important;
   border-color: #1d4667 !important;
+}
+
+body.admin-interface .admin-sidebar,
+body.admin-interface .admin-nav,
+body.admin-interface .admin-menu,
+body.admin-interface .admin-sidebar-nav,
+body.admin-interface .admin-main-nav,
+body.admin-interface .admin-section-nav,
+body.admin-interface .admin-config-nav,
+body.admin-interface .admin-controls,
+body.admin-interface .admin-config-area .sidebar,
+body.admin-interface .admin-container .sidebar,
+body.admin-interface [class*=admin-sidebar],
+body.admin-interface [class*=admin-nav-sidebar],
+.admin-sidebar,
+.admin-sidebar-wrapper,
+.admin-sidebar__wrapper,
+.admin-sidebar-container,
+.admin-sidebar__container,
+.admin-sidebar-content,
+.admin-sidebar__content,
+.admin-sidebar-nav,
+.admin-nav-sidebar,
+.admin-menu,
+.admin-menu-panel,
+.admin-navigation,
+.admin-section-nav,
+.admin-config-nav,
+.admin-main-nav,
+.admin-drawer,
+.admin-drawer__content,
+.admin-panel-sidebar,
+[class*=admin-sidebar],
+[class*=admin-nav-sidebar] {
+  color: #d6dee4 !important;
+  background: #071a2c !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.admin-interface .admin-sidebar *,
+body.admin-interface .admin-nav *,
+body.admin-interface .admin-menu *,
+body.admin-interface .admin-sidebar-nav *,
+body.admin-interface .admin-main-nav *,
+body.admin-interface .admin-section-nav *,
+body.admin-interface .admin-config-nav *,
+body.admin-interface [class*=admin-sidebar] *,
+.admin-sidebar *,
+.admin-sidebar-wrapper *,
+.admin-sidebar__wrapper *,
+.admin-sidebar-container *,
+.admin-sidebar__container *,
+.admin-sidebar-content *,
+.admin-sidebar__content *,
+.admin-sidebar-nav *,
+.admin-nav-sidebar *,
+.admin-menu *,
+.admin-menu-panel *,
+.admin-navigation *,
+.admin-section-nav *,
+.admin-config-nav *,
+.admin-main-nav *,
+.admin-drawer *,
+.admin-drawer__content *,
+.admin-panel-sidebar *,
+[class*=admin-sidebar] *,
+[class*=admin-nav-sidebar] * {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.admin-interface .admin-sidebar a,
+body.admin-interface .admin-sidebar button,
+body.admin-interface .admin-nav a,
+body.admin-interface .admin-nav button,
+body.admin-interface .admin-menu a,
+body.admin-interface .admin-menu button,
+body.admin-interface .admin-sidebar-nav a,
+body.admin-interface .admin-sidebar-nav button,
+body.admin-interface [class*=admin-sidebar] a,
+body.admin-interface [class*=admin-sidebar] button,
+.admin-sidebar a,
+.admin-sidebar button,
+.admin-sidebar-wrapper a,
+.admin-sidebar-wrapper button,
+.admin-sidebar__wrapper a,
+.admin-sidebar__wrapper button,
+.admin-sidebar-nav a,
+.admin-sidebar-nav button,
+.admin-nav-sidebar a,
+.admin-nav-sidebar button,
+.admin-menu a,
+.admin-menu button,
+.admin-navigation a,
+.admin-navigation button,
+.admin-section-nav a,
+.admin-section-nav button,
+.admin-config-nav a,
+.admin-config-nav button,
+.admin-drawer a,
+.admin-drawer button,
+[class*=admin-sidebar] a,
+[class*=admin-sidebar] button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  color: #d6dee4 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+}
+
+body.admin-interface .admin-sidebar a.active,
+body.admin-interface .admin-sidebar button.active,
+body.admin-interface .admin-sidebar a:hover,
+body.admin-interface .admin-sidebar button:hover,
+body.admin-interface .admin-nav a.active,
+body.admin-interface .admin-nav button.active,
+body.admin-interface .admin-nav a:hover,
+body.admin-interface .admin-nav button:hover,
+body.admin-interface .admin-menu a.active,
+body.admin-interface .admin-menu button.active,
+body.admin-interface .admin-menu a:hover,
+body.admin-interface .admin-menu button:hover,
+body.admin-interface [class*=admin-sidebar] a.active,
+body.admin-interface [class*=admin-sidebar] button.active,
+body.admin-interface [class*=admin-sidebar] a:hover,
+body.admin-interface [class*=admin-sidebar] button:hover,
+body.admin-interface [aria-current=page],
+.admin-sidebar a.active,
+.admin-sidebar button.active,
+.admin-sidebar a:hover,
+.admin-sidebar button:hover,
+.admin-sidebar-wrapper a.active,
+.admin-sidebar-wrapper button.active,
+.admin-sidebar-wrapper a:hover,
+.admin-sidebar-wrapper button:hover,
+.admin-sidebar__wrapper a.active,
+.admin-sidebar__wrapper button.active,
+.admin-sidebar__wrapper a:hover,
+.admin-sidebar__wrapper button:hover,
+.admin-sidebar-nav a.active,
+.admin-sidebar-nav button.active,
+.admin-sidebar-nav a:hover,
+.admin-sidebar-nav button:hover,
+.admin-nav-sidebar a.active,
+.admin-nav-sidebar button.active,
+.admin-nav-sidebar a:hover,
+.admin-nav-sidebar button:hover,
+.admin-menu a.active,
+.admin-menu button.active,
+.admin-menu a:hover,
+.admin-menu button:hover,
+[class*=admin-sidebar] a.active,
+[class*=admin-sidebar] button.active,
+[class*=admin-sidebar] a:hover,
+[class*=admin-sidebar] button:hover,
+[class*=admin-sidebar] [aria-current=page] {
+  color: #f4f7f9 !important;
+  background: #12314a !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.admin-sidebar input,
+.admin-sidebar-wrapper input,
+.admin-sidebar__wrapper input,
+[class*=admin-sidebar] input {
+  color: #d6dee4 !important;
+  background: #071a2c !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.sidebar-wrapper,
+.sidebar-wrapper .sidebar-section {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.sidebar-section-link,
+.sidebar-section-link.active,
+.sidebar-section-link:hover {
+  border: 0 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
 }
 
 /*# sourceMappingURL=theme.css.map */
