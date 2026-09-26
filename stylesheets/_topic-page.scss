@@ -8,7 +8,7 @@
 
 .topic-post {
   @include panel-surface(var(--space-3), var(--chamfer));
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .topic-post .row {

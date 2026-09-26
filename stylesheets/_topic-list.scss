@@ -106,7 +106,7 @@
 .bm-feed.is-grid .bm-feed__list {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 6px;
+  gap: 8px;
 }
 
 .category-box,
@@ -168,7 +168,7 @@
   background: transparent;
   border: 0;
   border-collapse: separate;
-  border-spacing: 0 6px;
+  border-spacing: 0 8px;
 }
 
 .topic-list thead {
