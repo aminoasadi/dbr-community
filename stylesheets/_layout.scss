@@ -28,8 +28,8 @@
 .list-controls {
   margin: 0 calc(var(--space-4) * -1);
   padding: var(--space-2) var(--space-4);
-  border-bottom: 1px solid var(--border-light);
-  background: rgba(7, 26, 44, 0.92);
+  border-bottom: 0;
+  background: transparent;
 }
 
 .fk-d-menu__inner-content,

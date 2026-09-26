@@ -1,16 +1,49 @@
+import { ensureObserver } from "./animations";
 import {
   TYPES,
   avatar,
   el,
   escapeHtml,
   num,
+  queryAll,
+  registerEnhancer,
   renderIcon,
   safeLocalStorageGet,
   safeLocalStorageSet,
   timeAgo,
 } from "./helpers";
 
-function setupCards() {}
+function hideDisabledEmailNotice(scope = document) {
+  queryAll(".alert, .alert-info, .alert-error, .alert-warning, .global-notice, .admin-notice", scope)
+    .filter((node) =>
+      /All outgoing email has been globally disabled by an administrator/i.test(
+        node.textContent || ""
+      )
+    )
+    .forEach((node) => node.remove());
+}
+
+function replaceWelcomeBackTitle(scope = document) {
+  queryAll("h1, h2, .welcome-banner, .welcome-banner *", scope)
+    .filter((node) => /^Welcome back,/i.test((node.textContent || "").trim()))
+    .forEach((node) => {
+      node.textContent = "welcome to house of technocrats";
+    });
+}
+
+function setupCards() {
+  registerEnhancer("cards.notices", () => {
+    hideDisabledEmailNotice();
+    replaceWelcomeBackTitle();
+    ensureObserver("cards.notices", document.body, () => {
+      hideDisabledEmailNotice();
+      replaceWelcomeBackTitle();
+    }, {
+      childList: true,
+      subtree: true,
+    });
+  });
+}
 
 function buildFeedPostCard(context, topic, users) {
   const type = context.postType(topic);

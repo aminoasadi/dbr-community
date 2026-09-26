@@ -48,13 +48,20 @@
 .d-header,
 .sidebar-wrapper,
 .sidebar-wrapper .sidebar-section,
-.list-controls,
 .fk-d-menu__inner-content,
 .menu-panel,
 .select-kit .select-kit-body {
   color: #d6dee4 !important;
   background-color: #071a2c !important;
   border-color: #123049 !important;
+}
+
+.list-controls {
+  color: #d6dee4 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 .d-header {
@@ -270,6 +277,38 @@
 .bm-grid .topic-list-item::after,
 .bm-grid .latest-topic-list-item::after {
   content: none !important;
+}
+
+.bm-rail {
+  gap: 32px !important;
+}
+
+.bm-leaderboard::after,
+.bm-railcard::after,
+.bm-profilecard::after {
+  content: none !important;
+}
+
+.bm-leaderboard::before,
+.bm-railcard::before,
+.bm-profilecard::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  background: var(--bg-page);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  z-index: 1;
+}
+
+.bm-leaderboard > *,
+.bm-railcard > *,
+.bm-profilecard > * {
+  position: relative;
+  z-index: 2;
 }
 
 .topic-list .title,
@@ -1209,10 +1248,125 @@ body.admin-interface [aria-current="page"],
   box-shadow: none !important;
 }
 
+.sidebar-wrapper,
+#d-sidebar {
+  padding-top: 12px !important;
+}
+
+.sidebar-wrapper .sidebar-sections,
+.sidebar-wrapper .sidebar-content,
+.sidebar-wrapper .sidebar-container,
+#d-sidebar .sidebar-sections,
+#d-sidebar .sidebar-content,
+#d-sidebar .sidebar-container {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.sidebar-section[data-section-name="community"] {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 .sidebar-section-link,
 .sidebar-section-link.active,
 .sidebar-section-link:hover {
   border: 0 !important;
   box-shadow: none !important;
   clip-path: none !important;
+}
+
+.menu-panel,
+.fk-d-menu__inner-content,
+.user-menu,
+.user-menu .quick-access-panel,
+.user-menu .quick-access-panel .panel-body,
+.user-menu .quick-access-panel .item-list,
+.user-menu .quick-access-panel ul {
+  color: #f4f7f9 !important;
+  background: #071a2c !important;
+  border-color: #1d4667 !important;
+}
+
+.user-menu a,
+.user-menu button,
+.user-menu .btn,
+.user-menu .item,
+.user-menu .notification,
+.user-menu .message,
+.user-menu .quick-access-panel li,
+.menu-panel a,
+.menu-panel button,
+.menu-panel .btn,
+.menu-panel li {
+  min-height: 48px !important;
+  color: #f4f7f9 !important;
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+}
+
+.user-menu .item:hover,
+.user-menu .item:focus-visible,
+.user-menu .notification:hover,
+.user-menu .message:hover,
+.user-menu .quick-access-panel li:hover,
+.menu-panel a:hover,
+.menu-panel button:hover,
+.menu-panel li:hover {
+  color: #f4f7f9 !important;
+  background: #12314a !important;
+}
+
+.user-menu .item-title,
+.user-menu .item-label,
+.user-menu .title,
+.user-menu .name,
+.user-menu .excerpt,
+.user-menu .notification-title,
+.user-menu .notification-body,
+.user-menu .message-title,
+.user-menu .message-body,
+.menu-panel .item-title,
+.menu-panel .title,
+.menu-panel .label {
+  color: #f4f7f9 !important;
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+}
+
+.user-menu .item-description,
+.user-menu .description,
+.user-menu .username,
+.user-menu .time,
+.menu-panel .description,
+.menu-panel .username,
+.menu-panel .time {
+  color: #d6dee4 !important;
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+.user-menu .d-icon,
+.menu-panel .d-icon {
+  color: #f4f7f9 !important;
+  opacity: 1 !important;
+}
+
+.user-menu .badge-notification,
+.user-menu .unread-notifications,
+.menu-panel .badge-notification,
+.menu-panel .unread-notifications {
+  min-width: 24px !important;
+  height: 24px !important;
+  color: #071a2c !important;
+  background: #d6dee4 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+.user-menu .btn,
+.user-menu button,
+.menu-panel .btn,
+.menu-panel button {
+  border-color: #1d4667 !important;
 }
