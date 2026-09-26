@@ -723,13 +723,54 @@ html[dir="rtl"] textarea {
 
 .sidebar-section .sidebar-section-header:hover,
 .sidebar-section .sidebar-section-header:focus-visible,
+.sidebar-section .sidebar-section-header.active,
+.sidebar-section .sidebar-section-header.is-active,
+.sidebar-section .sidebar-section-header.is-expanded,
+.sidebar-section .sidebar-section-header[aria-expanded="true"],
+.sidebar-section .sidebar-section-header[aria-current="page"],
 .sidebar-section .sidebar-more-section-trigger:hover,
 .sidebar-section .sidebar-more-section-trigger:focus-visible,
+.sidebar-section .sidebar-more-section-trigger.active,
+.sidebar-section .sidebar-more-section-trigger.is-active,
+.sidebar-section .sidebar-more-section-trigger[aria-expanded="true"],
+.sidebar-section .sidebar-more-section-trigger[aria-current="page"],
 .sidebar-section .sidebar-more-section-links-details-summary:hover,
-.sidebar-section .sidebar-more-section-links-details-summary:focus-visible {
+.sidebar-section .sidebar-more-section-links-details-summary:focus-visible,
+.sidebar-section .sidebar-more-section-links-details-summary.active,
+.sidebar-section .sidebar-more-section-links-details-summary.is-active,
+.sidebar-section .sidebar-more-section-links-details-summary[aria-expanded="true"],
+.sidebar-section .sidebar-more-section-links-details-summary[aria-current="page"] {
+  border: 0 !important;
+  border-bottom: 1px solid #123049 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
+  clip-path: none !important;
   color: #f4f7f9 !important;
+}
+
+.sidebar-section .sidebar-more-section-trigger:hover,
+.sidebar-section .sidebar-more-section-trigger:focus-visible,
+.sidebar-section .sidebar-more-section-trigger.active,
+.sidebar-section .sidebar-more-section-trigger.is-active,
+.sidebar-section .sidebar-more-section-trigger[aria-expanded="true"],
+.sidebar-section .sidebar-more-section-trigger[aria-current="page"],
+.sidebar-section .sidebar-more-section-links-details-summary:hover,
+.sidebar-section .sidebar-more-section-links-details-summary:focus-visible,
+.sidebar-section .sidebar-more-section-links-details-summary.active,
+.sidebar-section .sidebar-more-section-links-details-summary.is-active,
+.sidebar-section .sidebar-more-section-links-details-summary[aria-expanded="true"],
+.sidebar-section .sidebar-more-section-links-details-summary[aria-current="page"] {
+  border-bottom: 0 !important;
+}
+
+.sidebar-section .sidebar-section-header[aria-expanded="true"] .sidebar-section-header-text,
+.sidebar-section .sidebar-section-header[aria-expanded="true"] .d-icon,
+.sidebar-section .sidebar-section-header.is-expanded .sidebar-section-header-text,
+.sidebar-section .sidebar-section-header.is-expanded .d-icon {
+  color: #d6dee4 !important;
+  opacity: 1 !important;
 }
 
 // Admin panel side navigation uses a separate Discourse surface. Keep it in the
