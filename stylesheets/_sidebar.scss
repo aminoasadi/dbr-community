@@ -1,6 +1,6 @@
 .sidebar-wrapper {
-  background: var(--primary-900);
-  border-right: 1px solid var(--primary-700);
+  background: var(--dbr-abyss);
+  border-inline-end: 1px solid var(--dbr-grid-2);
 }
 
 .sidebar-section-header-text,
@@ -16,8 +16,8 @@
 .sidebar-section-link-content-text {
   font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.82);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .sidebar-section-link .prefix-icon {
@@ -27,14 +27,13 @@
 
 .sidebar-section-link.active,
 .sidebar-section-link:hover {
-  @include chamfer(var(--chamfer-sm));
-  background: var(--coral);
-  border-radius: 0;
+  border-radius: 10px;
+  background: var(--dbr-chrome-0);
 }
 
 .sidebar-section-link.active .sidebar-section-link-content-text,
 .sidebar-section-link:hover .sidebar-section-link-content-text {
-  color: var(--primary-900);
+  color: var(--dbr-ink);
   font-weight: var(--fw-bold);
 }
 

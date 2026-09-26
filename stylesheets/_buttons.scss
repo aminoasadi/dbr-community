@@ -1,20 +1,21 @@
 .btn {
   @include button-shell();
   --btn-fill: var(--bg-page);
-  --btn-stroke: var(--primary-500);
-  color: var(--primary-500);
+  --btn-stroke: var(--dbr-grid-3);
+  color: var(--text-on-dark);
   font-size: var(--text-base);
   font-weight: var(--fw-medium);
   line-height: 1;
-  box-shadow: inset 0 0 0 1px var(--primary-500), var(--shadow-button);
+  box-shadow: var(--shadow-button);
   white-space: nowrap;
   user-select: none;
 }
 
 .btn:hover {
-  --btn-fill: var(--bg-subtle);
-  --btn-stroke: var(--primary-500);
-  color: var(--primary-500);
+  --btn-fill: var(--dbr-slate);
+  --btn-stroke: var(--dbr-grid-3);
+  color: var(--text-on-dark);
+  transform: translateY(-1px);
 }
 
 .btn .d-icon {
@@ -23,15 +24,15 @@
 
 .btn-primary,
 .btn-primary:hover {
-  --btn-fill: var(--primary-500);
-  --btn-stroke: var(--primary-500);
-  color: var(--text-on-dark);
+  --btn-fill: var(--dbr-chrome-0);
+  --btn-stroke: var(--dbr-chrome-0);
+  color: var(--dbr-ink);
   box-shadow: var(--shadow-button);
 }
 
 .btn-primary:hover {
-  --btn-fill: var(--primary-hover);
-  --btn-stroke: var(--primary-hover);
+  --btn-fill: var(--dbr-chrome-1);
+  --btn-stroke: var(--dbr-chrome-1);
 }
 
 .btn-danger {
@@ -42,15 +43,15 @@
 }
 
 #create-topic {
-  --btn-fill: var(--primary-500);
-  --btn-stroke: var(--primary-500);
-  color: var(--text-on-dark);
+  --btn-fill: var(--dbr-chrome-0);
+  --btn-stroke: var(--dbr-chrome-0);
+  color: var(--dbr-ink);
   box-shadow: var(--shadow-button);
 }
 
 #create-topic:hover {
-  --btn-fill: var(--primary-hover);
-  --btn-stroke: var(--primary-hover);
+  --btn-fill: var(--dbr-chrome-1);
+  --btn-stroke: var(--dbr-chrome-1);
 }
 
 .nav-pills > li > a {
@@ -67,7 +68,7 @@
 .nav-pills > li > a.active,
 .nav-pills > li > a:hover {
   @include chamfer(var(--chamfer-sm));
-  background: var(--primary-500);
-  color: var(--text-on-dark);
-  border-color: var(--primary-500);
+  background: var(--dbr-chrome-0);
+  color: var(--dbr-ink);
+  border-color: var(--dbr-chrome-0);
 }

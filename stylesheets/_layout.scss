@@ -1,6 +1,11 @@
 #main-outlet-wrapper {
   max-width: none;
-  background: var(--bg-page);
+  min-height: 100vh;
+  background:
+    linear-gradient(var(--dbr-grid-1) 1px, transparent 1px),
+    linear-gradient(90deg, var(--dbr-grid-1) 1px, transparent 1px),
+    var(--bg-page);
+  background-size: 80px 80px;
 }
 
 .d-header-wrap + #main-outlet-wrapper {
@@ -8,7 +13,8 @@
 }
 
 #main-outlet {
-  max-width: none;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: var(--space-4);
   padding-bottom: var(--space-6);
 }
@@ -23,7 +29,7 @@
   margin: 0 calc(var(--space-4) * -1);
   padding: var(--space-2) var(--space-4);
   border-bottom: 1px solid var(--border-light);
-  background: var(--bg-page);
+  background: rgba(7, 26, 44, 0.92);
 }
 
 .fk-d-menu__inner-content,
@@ -44,7 +50,8 @@ hr {
 .bm-feedhome,
 body.dbr-auth {
   background:
-    linear-gradient(90deg, rgba(45, 78, 110, 0.03) 0, rgba(45, 78, 110, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(45, 78, 110, 0.03) 0, rgba(45, 78, 110, 0.03) 1px, transparent 1px);
-  background-size: var(--space-4) var(--space-4);
+    linear-gradient(90deg, var(--dbr-grid-1) 0, var(--dbr-grid-1) 1px, transparent 1px),
+    linear-gradient(var(--dbr-grid-1) 0, var(--dbr-grid-1) 1px, transparent 1px),
+    var(--bg-page);
+  background-size: 80px 80px;
 }

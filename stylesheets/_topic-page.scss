@@ -8,7 +8,7 @@
 
 .topic-post {
   @include panel-surface(var(--space-3), var(--chamfer));
-  margin-bottom: var(--space-3);
+  margin-bottom: 6px;
 }
 
 .topic-post .row {
@@ -46,7 +46,7 @@
 
 blockquote {
   @include panel-surface(var(--space-3), var(--chamfer-sm));
-  border-left: var(--space-1) solid var(--coral);
-  background: var(--bg-subtle);
+  border-inline-start: 2px solid var(--dbr-chrome-2);
+  background: var(--dbr-deep);
   color: var(--text-primary);
 }

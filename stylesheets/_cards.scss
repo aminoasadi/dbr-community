@@ -85,7 +85,7 @@
   font-size: var(--text-md);
   font-weight: var(--fw-extra);
   color: var(--primary-700);
-  text-align: right;
+  text-align: end;
 }
 
 .bm-lb-score span,
@@ -155,11 +155,11 @@
 .bm-profile-stat {
   padding: var(--space-2);
   text-align: center;
-  border-right: 1px solid var(--border-light);
+  border-inline-end: 1px solid var(--border-light);
 }
 
 .bm-profile-stat:last-child {
-  border-right: 0;
+  border-inline-end: 0;
 }
 
 .bm-profile-stat b {

@@ -2,7 +2,7 @@
 .d-editor-container,
 .composer-fields,
 .composer-controls {
-  border-radius: 0 !important;
+  border-radius: var(--fillet-radius) !important;
 }
 
 .composer-popup {

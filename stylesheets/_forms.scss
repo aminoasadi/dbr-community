@@ -6,14 +6,13 @@ textarea,
 select,
 .d-editor-input,
 .select-kit .select-kit-header {
-  @include chamfer(var(--chamfer-sm));
-  @include chamfer-outline(var(--border-default), var(--chamfer-sm));
-  border-radius: 0 !important;
-  background: var(--surface-panel);
+  border: 1px solid var(--dbr-grid-3) !important;
+  border-radius: 10px !important;
+  background: var(--dbr-abyss);
   color: var(--text-primary);
   min-height: var(--size-control-md);
   padding: 0 var(--space-2);
-  box-shadow: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   position: relative;
 }
 
@@ -28,7 +27,13 @@ select:focus,
 .d-editor-input:focus,
 .select-kit .select-kit-header.is-focused {
   outline: none;
-  box-shadow: inset 0 0 0 1px var(--border-brand);
+  box-shadow: 0 0 0 1px var(--dbr-chrome-1);
+}
+
+html[dir="rtl"] select,
+html[lang="fa"] select {
+  padding-left: 34px;
+  padding-right: 14px;
 }
 
 .discourse-reactions-reaction-button:hover,

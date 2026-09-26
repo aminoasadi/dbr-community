@@ -5,21 +5,24 @@
 .bm-hero {
   margin: 0 calc(var(--space-4) * -1) var(--space-4);
   padding: var(--space-6) var(--space-4);
-  background: var(--primary-900);
+  border: 1px solid var(--dbr-grid-2);
+  border-radius: var(--fillet-radius);
+  background: rgba(4, 16, 28, 0.78);
+  box-shadow: var(--shadow-card);
   color: var(--text-on-dark);
   position: relative;
   overflow: hidden;
 }
 
 .bm-hero::before {
-  content: "ALIASYS";
+  content: "DEEP BLUE RADAR";
   position: absolute;
-  right: var(--space-4);
+  inset-inline-end: var(--space-4);
   bottom: calc(var(--space-4) * -1);
   font-size: clamp(120px, 18vw, 220px);
   font-weight: var(--fw-extra);
   line-height: 1;
-  letter-spacing: -0.08em;
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 0.08);
   pointer-events: none;
 }
@@ -103,7 +106,7 @@
 .bm-feed.is-grid .bm-feed__list {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: var(--space-3);
+  gap: 6px;
 }
 
 .category-box,
@@ -115,7 +118,7 @@
 .bm-leaderboard,
 .bm-railcard,
 .bm-profilecard {
-  border-radius: 0;
+  border-radius: var(--fillet-radius);
 }
 
 .category-box,
@@ -133,7 +136,7 @@
   inset: 0 auto auto 0;
   width: 100%;
   height: var(--space-1);
-  background: var(--coral);
+  background: var(--dbr-grid-3);
 }
 
 .category-box .category-box-heading a,
@@ -165,7 +168,7 @@
   background: transparent;
   border: 0;
   border-collapse: separate;
-  border-spacing: 0 var(--space-2);
+  border-spacing: 0 6px;
 }
 
 .topic-list thead {
@@ -190,7 +193,8 @@
 .subcategory-list-item:hover,
 .bm-railcard:hover,
 .bm-profilecard:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  background: rgba(26, 63, 92, 0.72);
   box-shadow: var(--shadow-pop);
 }
 
@@ -201,7 +205,7 @@
 }
 
 .topic-list .main-link {
-  padding-left: var(--space-3);
+  padding-inline-start: var(--space-3);
   position: relative;
 }
 
@@ -209,11 +213,11 @@
 .bm-post::before {
   content: "";
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: var(--space-2);
   bottom: var(--space-2);
   width: var(--space-1);
-  background: var(--coral);
+  background: var(--dbr-grid-3);
 }
 
 .topic-list .title,
@@ -232,7 +236,7 @@
   align-items: center;
   min-height: 24px;
   padding: 0 var(--space-2);
-  margin-right: var(--space-1);
+  margin-inline-end: var(--space-1);
   border-radius: 999px;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
@@ -340,12 +344,12 @@
 }
 
 .bm-viewtoggle button + button {
-  border-left: 1px solid var(--border-brand);
+  border-inline-start: 1px solid var(--border-brand);
 }
 
 .bm-viewtoggle button.active {
-  background: var(--primary-500);
-  color: var(--text-on-dark);
+  background: var(--dbr-chrome-0);
+  color: var(--dbr-ink);
 }
 
 .bm-grid .topic-list,

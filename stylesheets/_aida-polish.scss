@@ -1,0 +1,534 @@
+// Final AIDA alignment for native Discourse controls. This partial is loaded last
+// so core Ember component sizing cannot reintroduce rectangular borders or low contrast.
+
+:root {
+  --aida-control-edge: #1d4667;
+  --aida-control-fill: #071a2c;
+  --aida-control-hover: #0b2338;
+  --aida-copy: #d6dee4;
+  --aida-copy-muted: #a9b6c1;
+
+  // Discourse derives these values after loading a color scheme. Pin every
+  // readable scale to the landing-page chrome family instead of letting a
+  // dark `secondary` leak into counters, labels, and metadata.
+  --primary-low: #0b2338;
+  --primary-low-mid: #1d4667;
+  --primary-medium: #778794;
+  --primary-high: #a9b6c1;
+  --primary-very-high: #d6dee4;
+}
+
+// Removes inline paths left by a previous theme build. Native Discourse changes
+// controls after render, so a static fillet path creates the doubled outlines.
+[data-aida-fillet] {
+  clip-path: none !important;
+  border-radius: 10px !important;
+  box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.08) !important;
+}
+
+[data-aida-fillet-type="surface"] {
+  background-clip: padding-box;
+}
+
+.btn[data-aida-fillet],
+#create-topic[data-aida-fillet],
+.nav-pills > li > a[data-aida-fillet] {
+  min-height: 48px;
+  min-width: 48px;
+  padding-inline: 20px;
+  color: var(--dbr-chrome-0);
+  background: var(--aida-control-fill);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+// Exact DBR/AIDA field, stroke, and chrome scale. Direct colors are deliberate:
+// Discourse otherwise rebinds semantic variables after the theme stylesheet.
+.d-header,
+.sidebar-wrapper,
+.sidebar-wrapper .sidebar-section,
+.list-controls,
+.fk-d-menu__inner-content,
+.menu-panel,
+.select-kit .select-kit-body {
+  color: #d6dee4 !important;
+  background-color: #071a2c !important;
+  border-color: #123049 !important;
+}
+
+.d-header {
+  height: 64px !important;
+  box-shadow: none !important;
+}
+
+.d-header .contents {
+  min-width: 0;
+  gap: 12px;
+}
+
+.d-header #create-topic {
+  position: static !important;
+  inset: auto !important;
+  flex: 0 0 auto;
+  min-height: 40px !important;
+  margin: 0 !important;
+}
+
+.sidebar-section-link,
+.sidebar-section-link .prefix-icon,
+.sidebar-section-link-content-text,
+.sidebar-section-header-text,
+.sidebar-section[data-section-name] .sidebar-section-header-text {
+  color: #d6dee4 !important;
+}
+
+.sidebar-section-link {
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+}
+
+.sidebar-section-link.active,
+.sidebar-section-link:hover {
+  background: #12314a !important;
+  color: #f4f7f9 !important;
+}
+
+.sidebar-section-link.active .sidebar-section-link-content-text,
+.sidebar-section-link:hover .sidebar-section-link-content-text,
+.sidebar-section-link.active .prefix-icon,
+.sidebar-section-link:hover .prefix-icon {
+  color: #f4f7f9 !important;
+}
+
+.sidebar-section-header-text,
+.sidebar-section[data-section-name] .sidebar-section-header-text {
+  color: #a9b6c1 !important;
+}
+
+// Native sidebar section headers and overflow menus are buttons too. They must
+// not inherit the generic command-button shell or a stale inline fillet path.
+.sidebar-section .sidebar-section-header,
+.sidebar-section .sidebar-more-section-trigger,
+.sidebar-section .sidebar-more-section-links-details-summary,
+.sidebar-section .sidebar-section-header-collapsable {
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  min-height: 40px !important;
+  height: 40px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  color: #a9b6c1 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+}
+
+.sidebar-section .sidebar-section-header {
+  width: 100% !important;
+  justify-content: flex-start !important;
+  gap: 10px;
+  border-bottom: 1px solid #123049 !important;
+  border-radius: 0 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+}
+
+.sidebar-section .sidebar-section-header:hover,
+.sidebar-section .sidebar-section-header:focus-visible,
+.sidebar-section .sidebar-more-section-trigger:hover {
+  background: #0b2338 !important;
+  color: #f4f7f9 !important;
+}
+
+.sidebar-section .sidebar-section-header-caret,
+.sidebar-section .sidebar-section-header .d-icon,
+.sidebar-section .sidebar-more-section-trigger .d-icon {
+  flex: 0 0 20px;
+  width: 20px !important;
+  height: 20px !important;
+  color: inherit !important;
+}
+
+.sidebar-section .sidebar-more-section-trigger {
+  width: 40px !important;
+  flex: 0 0 40px !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+
+// Administration tabs use the same quiet navigation treatment as the landing
+// header. A selected tab is a restrained slate surface, never a floating paper chip.
+.admin-interface .nav-pills,
+.admin-nav .nav-pills,
+.admin-interface .nav-pills > li,
+.admin-nav .nav-pills > li {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.admin-interface .nav-pills > li > a,
+.admin-nav .nav-pills > li > a,
+.admin-interface .nav-pills > li > button,
+.admin-nav .nav-pills > li > button {
+  min-height: 40px !important;
+  padding: 0 18px !important;
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  color: #a9b6c1 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  font-family: var(--font-mono) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+}
+
+.admin-interface .nav-pills > li > a.active,
+.admin-nav .nav-pills > li > a.active,
+.admin-interface .nav-pills > li > button.active,
+.admin-nav .nav-pills > li > button.active,
+.admin-interface .nav-pills > li > a[aria-current="page"],
+.admin-nav .nav-pills > li > a[aria-current="page"] {
+  border-color: #1d4667 !important;
+  background: #12314a !important;
+  color: #f4f7f9 !important;
+}
+
+.topic-list-item,
+.latest-topic-list-item,
+.bm-post,
+.bm-leaderboard,
+.bm-railcard,
+.bm-profilecard,
+.topic-post,
+.category-box,
+.subcategory-list-item {
+  color: #d6dee4 !important;
+  background: rgba(11, 35, 56, 0.88) !important;
+  border-color: #123049 !important;
+  box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06) !important;
+}
+
+.topic-list .title,
+.latest-topic-list-item .title,
+.bm-post__title,
+.bm-profile-name,
+.bm-lb-name,
+.topic-list .posts,
+.topic-list .views,
+.topic-list .likes,
+.topic-list .num,
+.bm-post__stat b,
+.bm-profile-stat b,
+.bm-lb-score,
+.category-box .category-box-heading a,
+.subcategory-list-item .subcategory-title-link,
+.category-box h3 a {
+  color: #f4f7f9 !important;
+}
+
+.topic-list .age,
+.topic-list .activity,
+.topic-list .link-bottom-line,
+.topic-list .topic-excerpt,
+.bm-post__meta,
+.bm-post__space,
+.bm-post__stat span,
+.bm-lb-rank,
+.bm-lb-name small,
+.bm-lb-score span,
+.bm-profile-handle,
+.bm-profile-stat span,
+.category-box .category-box-description,
+.subcategory-list-item .category-description {
+  color: #a9b6c1 !important;
+}
+
+.topic-list td,
+.topic-list .main-link,
+.topic-list .link-bottom-line,
+.topic-list .topic-excerpt {
+  border-color: #123049 !important;
+}
+
+.topic-list-item:hover,
+.latest-topic-list-item:hover,
+.bm-post:hover,
+.category-box:hover,
+.subcategory-list-item:hover,
+.bm-railcard:hover,
+.bm-profilecard:hover {
+  background: rgba(26, 63, 92, 0.62) !important;
+}
+
+.btn-primary[data-aida-fillet],
+#create-topic[data-aida-fillet] {
+  color: var(--dbr-ink);
+  background: var(--dbr-chrome-0);
+  box-shadow: inset 0 0 0 1px var(--dbr-chrome-0) !important;
+}
+
+.btn[data-aida-fillet]:hover,
+.btn[data-aida-fillet]:focus-visible,
+.nav-pills > li > a[data-aida-fillet]:hover {
+  color: var(--dbr-chrome-0);
+  background: var(--aida-control-hover);
+}
+
+.btn-primary[data-aida-fillet]:hover,
+#create-topic[data-aida-fillet]:hover {
+  color: var(--dbr-ink);
+  background: var(--dbr-chrome-1);
+}
+
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 1px solid var(--dbr-chrome-0) !important;
+  outline-offset: 3px;
+}
+
+// Search overlay: one shell, one input, and a stable icon rail.
+.search-menu,
+.search-menu-container,
+.search-menu .search-input,
+.search-menu-container .search-input {
+  min-width: 0;
+}
+
+.search-menu .search-input,
+.search-menu-container .search-input {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64px;
+  align-items: center;
+  min-height: 64px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--aida-control-edge) !important;
+  border-radius: 12px !important;
+  background: var(--dbr-abyss);
+  box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06);
+}
+
+.search-menu .search-input input,
+.search-menu-container .search-input input,
+.search-menu input[type="search"] {
+  width: 100%;
+  min-width: 0;
+  min-height: 62px;
+  padding-inline: 52px 18px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent;
+  color: var(--dbr-chrome-0);
+  box-shadow: none;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.search-menu input::placeholder,
+.search-menu-container input::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: var(--aida-copy-muted) !important;
+  opacity: 1;
+}
+
+.search-menu .search-icon,
+.search-menu .searching,
+.search-menu-container .search-icon {
+  position: absolute;
+  inset-inline-start: 18px;
+  width: 24px;
+  height: 24px;
+  color: var(--aida-copy-muted);
+}
+
+.search-menu .filter-button,
+.search-menu .search-filter,
+.search-menu-container .filter-button {
+  grid-column: 2;
+  width: 64px;
+  height: 62px;
+  margin: 0;
+  border: 0;
+  border-inline-start: 1px solid var(--aida-control-edge);
+  border-radius: 0;
+  background: transparent;
+  color: var(--aida-copy-muted);
+}
+
+// Header icons remain square and cannot stretch when badges or avatars load.
+.d-header-icons,
+.d-header-icons ul {
+  align-items: center;
+  gap: 6px;
+}
+
+.d-header-icons .icon,
+.header-dropdown-toggle,
+.header-sidebar-toggle button,
+.sidebar-toggle-button {
+  flex: 0 0 48px;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0 !important;
+  color: var(--dbr-chrome-1);
+  background: var(--aida-control-fill);
+}
+
+.d-header-icons .icon .d-icon,
+.header-dropdown-toggle .d-icon,
+.header-sidebar-toggle .d-icon,
+.sidebar-toggle-button .d-icon {
+  width: 22px;
+  height: 22px;
+  color: inherit;
+}
+
+.d-header-icons .badge-notification,
+.d-header-icons .unread-notifications {
+  inset-block-start: 2px;
+  inset-inline-end: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--dbr-abyss);
+  border-radius: 999px;
+  background: var(--dbr-chrome-1);
+  color: var(--dbr-ink);
+  font-size: 11px;
+  line-height: 1;
+}
+
+// Dialog footer and Close actions.
+.modal-footer,
+.dialog-footer,
+.d-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 18px 24px;
+  border-top: 1px solid var(--dbr-grid-2);
+}
+
+.modal-footer .btn,
+.dialog-footer .btn,
+.d-modal__footer .btn {
+  width: auto;
+  min-width: 120px;
+  max-width: 100%;
+}
+
+// Topic action row: keep count, icons, and Reply aligned without nested boxes.
+.post-menu-area {
+  padding: 12px 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--dbr-grid-2) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+}
+
+.post-menu-area .post-controls,
+.post-menu-area .actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 48px;
+}
+
+.post-menu-area .btn,
+.post-controls .btn,
+.post-controls button {
+  width: auto;
+  min-width: 48px;
+  min-height: 48px;
+  margin: 0 !important;
+  padding-inline: 14px;
+  color: var(--aida-copy-muted);
+}
+
+.post-menu-area .btn.reply,
+.post-controls .reply {
+  min-width: 132px;
+  color: var(--dbr-chrome-0);
+  font-weight: 700;
+}
+
+.post-controls .like-count,
+.post-controls .show-replies,
+.post-controls .widget-button {
+  color: var(--aida-copy-muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.post-controls .d-icon {
+  width: 22px;
+  height: 22px;
+  color: inherit;
+}
+
+html[lang="fa"] .btn,
+html[dir="rtl"] .btn,
+html[lang="fa"] input,
+html[dir="rtl"] input,
+html[lang="fa"] textarea,
+html[dir="rtl"] textarea {
+  font-family: var(--font-persian);
+  letter-spacing: 0;
+}
+
+@media (max-width: 700px) {
+  .search-menu .search-input,
+  .search-menu-container .search-input {
+    min-height: 56px;
+    grid-template-columns: minmax(0, 1fr) 56px;
+  }
+
+  .search-menu .search-input input,
+  .search-menu-container .search-input input,
+  .search-menu input[type="search"] {
+    min-height: 54px;
+    font-size: 16px;
+  }
+
+  .search-menu .filter-button,
+  .search-menu .search-filter,
+  .search-menu-container .filter-button {
+    width: 56px;
+    height: 54px;
+  }
+
+  .post-menu-area .post-controls,
+  .post-menu-area .actions {
+    justify-content: flex-start;
+  }
+
+  .post-menu-area .btn.reply,
+  .post-controls .reply {
+    min-width: 112px;
+  }
+}
