@@ -2546,4 +2546,96 @@ html[dir=rtl] textarea {
   color: #f4f7f9 !important;
 }
 
+body.admin-interface .admin-sidebar,
+body.admin-interface .admin-nav,
+body.admin-interface .admin-menu,
+body.admin-interface .admin-sidebar-nav,
+body.admin-interface .admin-main-nav,
+body.admin-interface .admin-section-nav,
+body.admin-interface .admin-config-nav,
+body.admin-interface .admin-controls,
+body.admin-interface .admin-config-area .sidebar,
+body.admin-interface .admin-container .sidebar,
+body.admin-interface [class*=admin-sidebar],
+body.admin-interface [class*=admin-nav-sidebar] {
+  color: #d6dee4 !important;
+  background: #071a2c !important;
+  border-color: #123049 !important;
+  box-shadow: inset -1px 0 0 #123049 !important;
+}
+
+body.admin-interface .admin-sidebar *,
+body.admin-interface .admin-nav *,
+body.admin-interface .admin-menu *,
+body.admin-interface .admin-sidebar-nav *,
+body.admin-interface .admin-main-nav *,
+body.admin-interface .admin-section-nav *,
+body.admin-interface .admin-config-nav *,
+body.admin-interface [class*=admin-sidebar] * {
+  border-color: #123049 !important;
+}
+
+body.admin-interface .admin-sidebar a,
+body.admin-interface .admin-sidebar button,
+body.admin-interface .admin-nav a,
+body.admin-interface .admin-nav button,
+body.admin-interface .admin-menu a,
+body.admin-interface .admin-menu button,
+body.admin-interface .admin-sidebar-nav a,
+body.admin-interface .admin-sidebar-nav button,
+body.admin-interface .admin-main-nav a,
+body.admin-interface .admin-main-nav button,
+body.admin-interface .admin-section-nav a,
+body.admin-interface .admin-section-nav button,
+body.admin-interface .admin-config-nav a,
+body.admin-interface .admin-config-nav button,
+body.admin-interface [class*=admin-sidebar] a,
+body.admin-interface [class*=admin-sidebar] button {
+  color: #d6dee4 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.admin-interface .admin-sidebar a.active,
+body.admin-interface .admin-sidebar button.active,
+body.admin-interface .admin-sidebar a:hover,
+body.admin-interface .admin-sidebar button:hover,
+body.admin-interface .admin-nav a.active,
+body.admin-interface .admin-nav button.active,
+body.admin-interface .admin-nav a:hover,
+body.admin-interface .admin-nav button:hover,
+body.admin-interface .admin-menu a.active,
+body.admin-interface .admin-menu button.active,
+body.admin-interface .admin-menu a:hover,
+body.admin-interface .admin-menu button:hover,
+body.admin-interface [class*=admin-sidebar] a.active,
+body.admin-interface [class*=admin-sidebar] button.active,
+body.admin-interface [class*=admin-sidebar] a:hover,
+body.admin-interface [class*=admin-sidebar] button:hover,
+body.admin-interface [aria-current=page] {
+  color: #f4f7f9 !important;
+  background: #12314a !important;
+  border-color: #1d4667 !important;
+}
+
+body.admin-interface .admin-sidebar .d-icon,
+body.admin-interface .admin-nav .d-icon,
+body.admin-interface .admin-menu .d-icon,
+body.admin-interface [class*=admin-sidebar] .d-icon {
+  color: currentColor !important;
+  opacity: 1 !important;
+}
+
+body.admin-interface .admin-sidebar .btn,
+body.admin-interface .admin-nav .btn,
+body.admin-interface .admin-menu .btn,
+body.admin-interface [class*=admin-sidebar] .btn {
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+}
+
 /*# sourceMappingURL=theme.css.map */
