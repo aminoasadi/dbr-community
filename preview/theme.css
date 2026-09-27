@@ -2047,6 +2047,26 @@ body.signup-page h1.login-title {
   clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
 }
 
+.nav-pills > li,
+.nav-pills > li > a,
+.nav-pills > li > a.active,
+.nav-pills > li > a[aria-current=page] {
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+}
+
+.nav-pills > li::before,
+.nav-pills > li::after,
+.nav-pills > li > a::before,
+.nav-pills > li > a::after,
+.nav-pills > li > a[data-aida-fillet]::before,
+.nav-pills > li > a[data-aida-fillet]::after {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .d-header,
 .sidebar-wrapper,
 .sidebar-wrapper .sidebar-section,
