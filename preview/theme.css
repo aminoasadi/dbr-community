@@ -2268,6 +2268,12 @@ body.signup-page h1.login-title {
   gap: 16px !important;
 }
 
+.bm-profilecard + .bm-leaderboard,
+.bm-profilecard + .bm-railcard,
+.bm-leaderboard + .bm-railcard {
+  margin-top: 16px !important;
+}
+
 .bm-leaderboard::after,
 .bm-railcard::after,
 .bm-profilecard::after {
