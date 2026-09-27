@@ -1990,11 +1990,11 @@ body.signup-page h1.login-title {
   position: relative !important;
   overflow: hidden !important;
   color: #f4f7f9 !important;
-  background: linear-gradient(90deg, rgba(4, 16, 28, 0.88) 0%, rgba(4, 16, 28, 0.5) 48%, rgba(4, 16, 28, 0.8) 100%), url("assets/dbr-hero-technocrat.webp") center 12%/cover no-repeat !important;
-  border: 0 !important;
+  background: linear-gradient(90deg, rgba(4, 16, 28, 0.88) 0%, rgba(4, 16, 28, 0.5) 48%, rgba(4, 16, 28, 0.8) 100%), url("assets/dbr-hero-technocrat.webp") center 36%/cover no-repeat !important;
+  border: 1px solid #123049 !important;
   border-radius: 12px !important;
   box-shadow: none !important;
-  font-size: clamp(28px, 4.8vw, 72px) !important;
+  font-size: clamp(48px, 8vw, 112px) !important;
   font-weight: 800 !important;
   line-height: 1.05 !important;
   letter-spacing: 0 !important;
@@ -2033,8 +2033,7 @@ body.signup-page h1.login-title {
   position: relative;
   z-index: 2;
   display: block;
-  max-width: 100%;
-  white-space: nowrap;
+  max-width: min(980px, 100%);
 }
 
 .d-header {
