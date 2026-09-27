@@ -64,6 +64,20 @@
   box-shadow: none !important;
 }
 
+.dbr-welcome-title {
+  width: min(100%, 860px) !important;
+  margin: 0 auto var(--space-3) !important;
+  padding: var(--space-3) 0 var(--space-2) !important;
+  color: #d6dee4 !important;
+  font-size: clamp(30px, 3.1vw, 46px) !important;
+  font-weight: 800 !important;
+  line-height: 1.12 !important;
+  letter-spacing: 0 !important;
+  text-align: start !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
 .d-header {
   height: 64px !important;
   box-shadow: none !important;
@@ -225,6 +239,13 @@
   box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06) !important;
 }
 
+.bm-leaderboard,
+.bm-railcard,
+.bm-profilecard {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .bm-post {
   color: #d6dee4 !important;
   background: rgba(11, 35, 56, 0.88) !important;
@@ -236,6 +257,11 @@
 .bm-grid .latest-topic-list-item {
   border: 0 !important;
   box-shadow: none !important;
+}
+
+.bm-grid .topic-list-body,
+.bm-feed.is-grid .bm-feed__list {
+  grid-template-columns: minmax(0, 1fr) !important;
 }
 
 .bm-grid .topic-list-item,
@@ -279,8 +305,22 @@
   content: none !important;
 }
 
+.bm-grid .topic-list-item .main-link,
+.bm-grid .latest-topic-list-item .main-link {
+  min-width: 0;
+}
+
+.bm-grid .topic-list-item .title,
+.bm-grid .latest-topic-list-item .title {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .bm-rail {
-  gap: 32px !important;
+  gap: 16px !important;
 }
 
 .bm-leaderboard::after,

@@ -28,6 +28,7 @@ function replaceWelcomeBackTitle(scope = document) {
     .filter((node) => /^Welcome back,/i.test((node.textContent || "").trim()))
     .forEach((node) => {
       node.textContent = "welcome to house of technocrats";
+      node.classList.add("dbr-welcome-title");
     });
 }
 
