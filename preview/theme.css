@@ -1228,6 +1228,30 @@ body.bm-feedhome #list-area > .contents {
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(14px) saturate(125%);
   padding: var(--space-2);
+  color: var(--text-primary);
+}
+
+.topic-map,
+.topic-map__stats,
+.topic-status-info {
+  background: var(--surface-panel);
+}
+
+.topic-map,
+.topic-map *,
+.topic-map__stats,
+.topic-map__stats *,
+.topic-status-info,
+.topic-status-info * {
+  color: var(--text-primary);
+}
+
+.topic-map .number,
+.topic-map__stats .number,
+.topic-map .views,
+.topic-map__stats .views {
+  color: var(--text-heading);
+  font-weight: var(--fw-bold);
 }
 
 .names .first {
@@ -2757,10 +2781,38 @@ button.btn-icon {
   max-width: 100%;
 }
 
+.topic-map,
+.topic-map__stats,
+.topic-status-info {
+  color: var(--dbr-chrome-1) !important;
+  border: 1px solid var(--dbr-grid-2) !important;
+  border-radius: 12px !important;
+  background: rgba(11, 35, 56, 0.9) !important;
+  box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06) !important;
+}
+
+.topic-map *,
+.topic-map__stats *,
+.topic-status-info * {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+
+.topic-map .number,
+.topic-map__stats .number,
+.topic-map .views,
+.topic-map__stats .views,
+.topic-map .topic-map__stat,
+.topic-map__stats .topic-map__stat {
+  color: var(--dbr-chrome-0) !important;
+  font-weight: 700 !important;
+}
+
 .post-menu-area {
   padding: 16px 0 !important;
+  color: var(--dbr-chrome-2) !important;
   border: 0 !important;
-  border-top: 1px solid var(--dbr-grid-2) !important;
+  border-top: 1px solid var(--dbr-grid-3) !important;
   border-radius: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
@@ -2785,22 +2837,26 @@ button.btn-icon {
   min-height: 48px;
   margin: 0 !important;
   padding-inline: 16px;
-  color: var(--aida-copy-muted);
+  color: var(--dbr-chrome-2) !important;
+  opacity: 1 !important;
 }
 
 .post-menu-area .btn.reply,
 .post-controls .reply {
   min-width: 136px;
-  color: var(--dbr-chrome-0);
+  color: var(--dbr-chrome-0) !important;
+  border-color: var(--dbr-grid-3) !important;
+  background: rgba(7, 26, 44, 0.72) !important;
   font-weight: 700;
 }
 
 .post-controls .like-count,
 .post-controls .show-replies,
 .post-controls .widget-button {
-  color: var(--aida-copy-muted);
+  color: var(--dbr-chrome-2) !important;
   font-size: 15px;
   font-weight: 700;
+  opacity: 1 !important;
 }
 
 .post-controls .d-icon {

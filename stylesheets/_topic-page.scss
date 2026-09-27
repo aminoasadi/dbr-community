@@ -37,6 +37,30 @@
 .topic-status-info,
 .post-menu-area {
   @include panel-surface(var(--space-2), var(--chamfer-sm));
+  color: var(--text-primary);
+}
+
+.topic-map,
+.topic-map__stats,
+.topic-status-info {
+  background: var(--surface-panel);
+}
+
+.topic-map,
+.topic-map *,
+.topic-map__stats,
+.topic-map__stats *,
+.topic-status-info,
+.topic-status-info * {
+  color: var(--text-primary);
+}
+
+.topic-map .number,
+.topic-map__stats .number,
+.topic-map .views,
+.topic-map__stats .views {
+  color: var(--text-heading);
+  font-weight: var(--fw-bold);
 }
 
 .names .first {
