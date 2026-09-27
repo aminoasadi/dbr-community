@@ -2150,6 +2150,12 @@ body.signup-page h1.login-title {
   box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06) !important;
 }
 
+.topic-list-item,
+.latest-topic-list-item {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .bm-leaderboard,
 .bm-railcard,
 .bm-profilecard {
@@ -2175,6 +2181,8 @@ body.signup-page h1.login-title {
   grid-template-columns: minmax(0, 1fr) !important;
 }
 
+.topic-list-item,
+.latest-topic-list-item,
 .bm-grid .topic-list-item,
 .bm-post,
 .bm-leaderboard,
@@ -2184,6 +2192,31 @@ body.signup-page h1.login-title {
 .subcategory-list-item {
   position: relative !important;
   overflow: hidden !important;
+}
+
+.topic-list-item .main-link::before {
+  display: none !important;
+  content: none !important;
+}
+
+.topic-list-item::before,
+.latest-topic-list-item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  background: var(--bg-page);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  z-index: 1;
+}
+
+.topic-list-item > *,
+.latest-topic-list-item > * {
+  position: relative;
+  z-index: 2;
 }
 
 .bm-grid .topic-list-item::after,
@@ -2209,6 +2242,12 @@ body.signup-page h1.login-title {
 .bm-grid .topic-list-item::after,
 .bm-grid .latest-topic-list-item::after {
   content: none !important;
+}
+
+.topic-list-item[data-post-type=""] a.title::before,
+.latest-topic-list-item[data-post-type=""] a.title::before {
+  content: none !important;
+  display: none !important;
 }
 
 .bm-grid .topic-list-item .main-link,

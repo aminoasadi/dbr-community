@@ -54,7 +54,7 @@ function decorateRows(context, scope = document) {
     )
     .forEach((row) => {
       try {
-        row.setAttribute("data-post-type", typeFromRow(context, row));
+        row.setAttribute("data-post-type", typeFromRow(context, row) || "discussion");
       } catch (error) {}
     });
 }
