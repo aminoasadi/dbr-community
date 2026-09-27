@@ -2004,6 +2004,7 @@ body.signup-page h1.login-title {
   --aida-control-edge: #1d4667;
   --aida-control-fill: #071a2c;
   --aida-control-hover: #0b2338;
+  --aida-control-cut: 10px;
   --aida-copy: #d6dee4;
   --aida-copy-muted: #a9b6c1;
   --primary-low: #0b2338;
@@ -2030,7 +2031,7 @@ body.signup-page h1.login-title {
   min-width: 48px;
   padding-inline: 24px;
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 var(--aida-control-cut), var(--aida-control-cut) 100%, 100% 100%, 100% 0, 0 0) !important;
   color: var(--dbr-chrome-0);
   background: var(--aida-control-fill);
   font-size: 15px;
@@ -2044,7 +2045,7 @@ body.signup-page h1.login-title {
 .btn-danger {
   border: 0 !important;
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 var(--aida-control-cut), var(--aida-control-cut) 100%, 100% 100%, 100% 0, 0 0) !important;
 }
 
 .nav-pills > li,
@@ -2963,7 +2964,7 @@ button.btn-icon {
 #create-topic,
 button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 var(--aida-control-cut), var(--aida-control-cut) 100%, 100% 100%, 100% 0, 0 0) !important;
 }
 
 .btn:hover,
@@ -3090,7 +3091,7 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
 .post-controls .reply {
   min-width: 136px;
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 var(--aida-control-cut), var(--aida-control-cut) 100%, 100% 100%, 100% 0, 0 0) !important;
   color: var(--dbr-chrome-0) !important;
   border: 0 !important;
   border-color: transparent !important;
