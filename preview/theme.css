@@ -3559,6 +3559,46 @@ body.admin-interface [class*=admin-sidebar] .btn {
   clip-path: none !important;
 }
 
+body.admin-interface .btn:disabled,
+body.admin-interface .btn[disabled],
+body.admin-interface .btn.disabled,
+body.admin-interface button:disabled,
+body.admin-interface button[disabled],
+body.admin-interface button.disabled,
+body.admin-interface .btn[aria-disabled=true],
+body.admin-interface button[aria-disabled=true],
+body.admin-interface .btn.btn-default:disabled,
+body.admin-interface .btn.btn-default[disabled],
+body.admin-interface .btn.btn-default.disabled {
+  border-top: 0 !important;
+  border-block-start: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+body.admin-interface .btn:disabled::before,
+body.admin-interface .btn:disabled::after,
+body.admin-interface .btn[disabled]::before,
+body.admin-interface .btn[disabled]::after,
+body.admin-interface .btn.disabled::before,
+body.admin-interface .btn.disabled::after,
+body.admin-interface button:disabled::before,
+body.admin-interface button:disabled::after,
+body.admin-interface button[disabled]::before,
+body.admin-interface button[disabled]::after,
+body.admin-interface button.disabled::before,
+body.admin-interface button.disabled::after,
+body.admin-interface .btn[aria-disabled=true]::before,
+body.admin-interface .btn[aria-disabled=true]::after,
+body.admin-interface button[aria-disabled=true]::before,
+body.admin-interface button[aria-disabled=true]::after {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .admin-sidebar,
 .admin-sidebar-wrapper,
 .admin-sidebar__wrapper,
