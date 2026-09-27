@@ -3131,6 +3131,44 @@ html[dir=rtl] textarea {
   opacity: 1 !important;
 }
 
+.sidebar-section details[open] > summary.sidebar-more-section-links-details-summary,
+.sidebar-section details[open] .sidebar-more-section-trigger,
+.sidebar-section details[open] .fk-d-menu__trigger,
+.sidebar-section .sidebar-more-section-trigger.btn,
+.sidebar-section .sidebar-more-section-trigger.btn:hover,
+.sidebar-section .sidebar-more-section-trigger.btn:focus,
+.sidebar-section .sidebar-more-section-trigger.btn:focus-visible,
+.sidebar-section .sidebar-more-section-trigger.btn[aria-expanded=true],
+.sidebar-section .sidebar-more-section-trigger.btn.is-expanded,
+.sidebar-section .sidebar-more-section-trigger.btn.is-active,
+.sidebar-section .sidebar-more-section-links-details-summary.btn,
+.sidebar-section .sidebar-more-section-links-details-summary.btn:hover,
+.sidebar-section .sidebar-more-section-links-details-summary.btn:focus,
+.sidebar-section .sidebar-more-section-links-details-summary.btn:focus-visible,
+.sidebar-section .sidebar-more-section-links-details-summary.btn[aria-expanded=true],
+.sidebar-section .sidebar-more-section-links-details-summary.btn.is-expanded,
+.sidebar-section .sidebar-more-section-links-details-summary.btn.is-active {
+  color: #f4f7f9 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+}
+
+.sidebar-section .sidebar-more-section-trigger .d-icon,
+.sidebar-section .sidebar-more-section-trigger svg,
+.sidebar-section .sidebar-more-section-trigger .svg-icon,
+.sidebar-section .sidebar-more-section-links-details-summary .d-icon,
+.sidebar-section .sidebar-more-section-links-details-summary svg,
+.sidebar-section .sidebar-more-section-links-details-summary .svg-icon {
+  color: #f4f7f9 !important;
+  fill: currentColor !important;
+  opacity: 1 !important;
+}
+
 body.admin-interface .admin-sidebar,
 body.admin-interface .admin-nav,
 body.admin-interface .admin-menu,
