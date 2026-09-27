@@ -3,7 +3,7 @@
   --btn-fill: var(--bg-page);
   --btn-stroke: var(--dbr-grid-3);
   border-radius: 12px 12px 12px 0;
-  clip-path: polygon(0 24px, 24px 100%, 100% 100%, 100% 0, 0 0);
+  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0);
   color: var(--text-on-dark);
   font-size: var(--text-base);
   font-weight: var(--fw-medium);
@@ -15,8 +15,10 @@
 
 .btn:hover {
   --btn-fill: var(--dbr-slate);
-  --btn-stroke: var(--dbr-grid-3);
+  --btn-stroke: transparent;
   color: var(--text-on-dark);
+  border-color: transparent !important;
+  box-shadow: none;
   transform: translateY(-1px);
 }
 
@@ -34,7 +36,9 @@
 
 .btn-primary:hover {
   --btn-fill: var(--dbr-chrome-1);
-  --btn-stroke: var(--dbr-chrome-1);
+  --btn-stroke: transparent;
+  border-color: transparent !important;
+  box-shadow: none;
 }
 
 .btn-danger {
@@ -53,7 +57,9 @@
 
 #create-topic:hover {
   --btn-fill: var(--dbr-chrome-1);
-  --btn-stroke: var(--dbr-chrome-1);
+  --btn-stroke: transparent;
+  border-color: transparent !important;
+  box-shadow: none;
 }
 
 .nav-pills > li > a {

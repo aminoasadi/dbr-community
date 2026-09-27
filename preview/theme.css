@@ -391,7 +391,7 @@ body.dbr-auth {
   --btn-fill: var(--bg-page);
   --btn-stroke: var(--dbr-grid-3);
   border-radius: 12px 12px 12px 0;
-  clip-path: polygon(0 24px, 24px 100%, 100% 100%, 100% 0, 0 0);
+  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0);
   color: var(--text-on-dark);
   font-size: var(--text-base);
   font-weight: var(--fw-medium);
@@ -403,8 +403,10 @@ body.dbr-auth {
 
 .btn:hover {
   --btn-fill: var(--dbr-slate);
-  --btn-stroke: var(--dbr-grid-3);
+  --btn-stroke: transparent;
   color: var(--text-on-dark);
+  border-color: transparent !important;
+  box-shadow: none;
   transform: translateY(-1px);
 }
 
@@ -422,7 +424,9 @@ body.dbr-auth {
 
 .btn-primary:hover {
   --btn-fill: var(--dbr-chrome-1);
-  --btn-stroke: var(--dbr-chrome-1);
+  --btn-stroke: transparent;
+  border-color: transparent !important;
+  box-shadow: none;
 }
 
 .btn-danger {
@@ -441,7 +445,9 @@ body.dbr-auth {
 
 #create-topic:hover {
   --btn-fill: var(--dbr-chrome-1);
-  --btn-stroke: var(--dbr-chrome-1);
+  --btn-stroke: transparent;
+  border-color: transparent !important;
+  box-shadow: none;
 }
 
 .nav-pills > li > a {
@@ -2002,7 +2008,7 @@ body.signup-page h1.login-title {
   min-width: 48px;
   padding-inline: 24px;
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 24px, 24px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
   color: var(--dbr-chrome-0);
   background: var(--aida-control-fill);
   font-size: 15px;
@@ -2015,7 +2021,7 @@ body.signup-page h1.login-title {
 .btn-primary,
 .btn-danger {
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 24px, 24px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
 }
 
 .d-header,
@@ -2779,7 +2785,19 @@ button.btn-icon {
 #create-topic,
 button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 24px, 24px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
+}
+
+.btn:hover,
+.btn:focus-visible,
+#create-topic:hover,
+#create-topic:focus-visible,
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-danger:hover,
+.btn-danger:focus-visible {
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
 
 .modal-footer,
@@ -2865,7 +2883,7 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
 .post-controls .reply {
   min-width: 136px;
   border-radius: 12px 12px 12px 0 !important;
-  clip-path: polygon(0 24px, 24px 100%, 100% 100%, 100% 0, 0 0) !important;
+  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
   color: var(--dbr-chrome-0) !important;
   border-color: var(--dbr-grid-3) !important;
   background: rgba(7, 26, 44, 0.72) !important;
