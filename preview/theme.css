@@ -2169,20 +2169,20 @@ body.signup-page h1.login-title {
 .user-messages-page .nav-pills > li > a,
 .user-main .btn,
 .user-content .btn {
-  min-height: 48px !important;
-  padding: 0 20px !important;
+  min-height: 36px !important;
+  padding: 0 12px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
   border: 1px solid transparent !important;
-  border-radius: 12px !important;
+  border-radius: 8px !important;
   background: transparent !important;
   color: #a9b6c1 !important;
   box-shadow: none !important;
   clip-path: none !important;
   font-family: var(--font-mono) !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
   letter-spacing: 0.12em !important;
   line-height: 1 !important;
@@ -2232,14 +2232,14 @@ body.signup-page h1.login-title {
 .user-content .new-private-message,
 .user-main .compose-private-message,
 .user-content .compose-private-message {
-  min-height: 56px !important;
-  padding: 0 28px !important;
+  min-height: 40px !important;
+  padding: 0 16px !important;
   border: 0 !important;
-  border-radius: 12px !important;
+  border-radius: 8px !important;
   background: #f4f7f9 !important;
   color: #071a2c !important;
   font-family: var(--font-primary) !important;
-  font-size: 18px !important;
+  font-size: 15px !important;
   font-weight: 800 !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
@@ -2249,6 +2249,8 @@ body.signup-page h1.login-title {
 .user-content .nav-pills .d-icon,
 .user-main .btn .d-icon,
 .user-content .btn .d-icon {
+  width: 16px !important;
+  height: 16px !important;
   color: currentColor !important;
   opacity: 1 !important;
 }
