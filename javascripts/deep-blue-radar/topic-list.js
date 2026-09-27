@@ -13,6 +13,7 @@ import {
   removeAll,
   safeLocalStorageGet,
   safeLocalStorageSet,
+  TYPES,
 } from "./helpers";
 import {
   attachFeedViewToggle,
@@ -47,14 +48,20 @@ function typeFromRow(context, row) {
   });
 }
 
+function labelForType(type) {
+  return (TYPES[type] && TYPES[type].label) || TYPES.discussion.label;
+}
+
 function decorateRows(context, scope = document) {
   scope
-    .querySelectorAll(
-      "tr.topic-list-item:not([data-post-type]), .latest-topic-list-item:not([data-post-type])"
-    )
+    .querySelectorAll("tr.topic-list-item, .latest-topic-list-item")
     .forEach((row) => {
       try {
-        row.setAttribute("data-post-type", typeFromRow(context, row) || "discussion");
+        const type = typeFromRow(context, row) || "discussion";
+        row.setAttribute("data-post-type", type);
+        row.querySelectorAll("a.title, .title").forEach((title) => {
+          title.setAttribute("data-post-type-label", labelForType(type));
+        });
       } catch (error) {}
     });
 }

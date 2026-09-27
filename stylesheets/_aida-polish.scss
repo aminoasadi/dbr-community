@@ -352,6 +352,8 @@
 .topic-list-item,
 .latest-topic-list-item {
   border: 0 !important;
+  border-radius: 12px 12px 12px 0 !important;
+  background-clip: padding-box !important;
   box-shadow: none !important;
 }
 
@@ -416,6 +418,19 @@
 .latest-topic-list-item > * {
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+
+.topic-list-item > *:first-child,
+.latest-topic-list-item > *:first-child {
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.topic-list-item > *:last-child,
+.latest-topic-list-item > *:last-child {
+  border-top-right-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
 }
 
 .bm-grid .topic-list-item::after,
@@ -448,8 +463,8 @@
   content: none !important;
 }
 
-.topic-list-item[data-post-type=""] a.title::before,
-.latest-topic-list-item[data-post-type=""] a.title::before {
+.topic-list-item[data-post-type=""] .title::before,
+.latest-topic-list-item[data-post-type=""] .title::before {
   content: none !important;
   display: none !important;
 }
