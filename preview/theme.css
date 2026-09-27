@@ -2136,6 +2136,92 @@ body.signup-page h1.login-title {
   color: #f4f7f9 !important;
 }
 
+.user-main .nav-pills,
+.user-content .nav-pills,
+.user-main .user-navigation,
+.user-main .user-secondary-navigation,
+.user-main .horizontal-overflow-nav,
+.user-messages-page .nav-pills {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  border-color: #123049 !important;
+}
+
+.user-main .nav-pills > li,
+.user-content .nav-pills > li,
+.user-messages-page .nav-pills > li {
+  margin: 0 !important;
+}
+
+.user-main .nav-pills > li > a,
+.user-content .nav-pills > li > a,
+.user-messages-page .nav-pills > li > a,
+.user-main .btn,
+.user-content .btn {
+  min-height: 48px !important;
+  padding: 0 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  color: #a9b6c1 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  font-family: var(--font-mono) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+}
+
+.user-main .nav-pills > li > a.active,
+.user-main .nav-pills > li > a:hover,
+.user-main .nav-pills > li > a:focus-visible,
+.user-content .nav-pills > li > a.active,
+.user-content .nav-pills > li > a:hover,
+.user-content .nav-pills > li > a:focus-visible,
+.user-messages-page .nav-pills > li > a.active,
+.user-messages-page .nav-pills > li > a:hover,
+.user-messages-page .nav-pills > li > a:focus-visible {
+  border-color: #1d4667 !important;
+  background: #12314a !important;
+  color: #f4f7f9 !important;
+}
+
+.user-main .btn-primary,
+.user-content .btn-primary,
+.user-main .new-private-message,
+.user-content .new-private-message,
+.user-main .compose-private-message,
+.user-content .compose-private-message {
+  min-height: 56px !important;
+  padding: 0 28px !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  background: #f4f7f9 !important;
+  color: #071a2c !important;
+  font-family: var(--font-primary) !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.user-main .nav-pills .d-icon,
+.user-content .nav-pills .d-icon,
+.user-main .btn .d-icon,
+.user-content .btn .d-icon {
+  color: currentColor !important;
+  opacity: 1 !important;
+}
+
 .topic-list-item,
 .latest-topic-list-item,
 .bm-leaderboard,
