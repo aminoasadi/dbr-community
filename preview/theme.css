@@ -4232,4 +4232,167 @@ body.admin-interface [aria-current=page],
   box-shadow: none !important;
 }
 
+body.login-page .login-body,
+body.signup-page .signup-body,
+body.signup-page .create-account-body,
+body.invite-page .invite-form {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: min(100%, 420px) !important;
+  max-width: 420px !important;
+  padding: 24px !important;
+  overflow: visible !important;
+}
+
+body.login-page .login-body *,
+body.signup-page .signup-body *,
+body.signup-page .create-account-body *,
+body.invite-page .invite-form * {
+  box-sizing: border-box !important;
+}
+
+body.login-page .login-form,
+body.login-page .login-left-side,
+body.login-page .login-right-side,
+body.signup-page .signup-form,
+body.signup-page .create-account-form,
+body.signup-page .login-left-side,
+body.signup-page .login-right-side,
+body.invite-page .invite-form form {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+body.login-page .login-welcome-header,
+body.signup-page .login-welcome-header {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 24px !important;
+  text-align: start !important;
+}
+
+body.login-page .login-welcome-header *,
+body.signup-page .login-welcome-header * {
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+body.login-page h1.login-title,
+body.signup-page h1.login-title {
+  display: block !important;
+  width: 100% !important;
+  color: #f4f7f9 !important;
+  line-height: 1.15 !important;
+}
+
+body.login-page .input-group,
+body.login-page .login-form .control-group,
+body.signup-page .input-group,
+body.signup-page .control-group,
+body.invite-page .invite-form .control-group {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 16px !important;
+}
+
+body.login-page .login-body label,
+body.signup-page .signup-body label,
+body.signup-page .create-account-body label,
+body.invite-page .invite-form label {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 8px !important;
+  color: #d6dee4 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+}
+
+body.login-page .login-body input,
+body.signup-page .signup-body input,
+body.signup-page .create-account-body input,
+body.invite-page .invite-form input {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 0 16px !important;
+  color: #f4f7f9 !important;
+  background: #04101c !important;
+}
+
+body.login-page .login-body .btn,
+body.signup-page .signup-body .btn,
+body.signup-page .create-account-body .btn,
+body.invite-page .invite-form .btn {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: 120px !important;
+  max-width: 100% !important;
+  min-height: 48px !important;
+  padding-inline: 18px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+body.login-page .login-body .btn-primary,
+body.signup-page .signup-body .btn-primary,
+body.signup-page .create-account-body .btn-primary,
+body.invite-page .invite-form .btn-primary {
+  width: 100% !important;
+}
+
+body.login-page .login-body .btn .d-button-label,
+body.login-page .login-body .btn span,
+body.signup-page .signup-body .btn .d-button-label,
+body.signup-page .signup-body .btn span,
+body.signup-page .create-account-body .btn .d-button-label,
+body.signup-page .create-account-body .btn span,
+body.invite-page .invite-form .btn .d-button-label,
+body.invite-page .invite-form .btn span {
+  display: inline !important;
+  width: auto !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+}
+
+body.login-page .login-body .login-right-side {
+  margin-top: 18px !important;
+  padding-top: 18px !important;
+  border-top: 1px solid #123049 !important;
+}
+
+body.login-page .login-body.dbr-no-alt .login-right-side {
+  display: none !important;
+}
+
+body.login-page #login-buttons,
+body.login-page .login-links,
+body.signup-page .login-links {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin-top: 16px !important;
+}
+
+body.login-page .login-links a,
+body.signup-page .login-links a {
+  display: inline-flex !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  color: #d6dee4 !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+}
+
 /*# sourceMappingURL=theme.css.map */
