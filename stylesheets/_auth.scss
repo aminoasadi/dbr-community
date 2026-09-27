@@ -10,8 +10,11 @@ body.account-created-page {
 
   #main-outlet-wrapper {
     padding-top: 0;
-    background: var(--dbr-abyss);
-    background-size: auto;
+    background:
+      linear-gradient(var(--dbr-grid-1) 1px, transparent 1px),
+      linear-gradient(90deg, var(--dbr-grid-1) 1px, transparent 1px),
+      var(--dbr-hull);
+    background-size: 80px 80px;
   }
 }
 
@@ -22,19 +25,27 @@ body.invite-page,
 body.password-reset-page,
 body.activate-account-page,
 body.account-created-page {
-  background: var(--dbr-abyss) !important;
-  background-image: none !important;
-  background-size: auto !important;
+  background:
+    linear-gradient(var(--dbr-grid-1) 1px, transparent 1px),
+    linear-gradient(90deg, var(--dbr-grid-1) 1px, transparent 1px),
+    var(--dbr-hull) !important;
+  background-size: 80px 80px !important;
 }
 
 body.dbr-auth #main-outlet-wrapper,
-body.dbr-auth #main-outlet,
+body.dbr-auth #main-outlet {
+  background:
+    linear-gradient(var(--dbr-grid-1) 1px, transparent 1px),
+    linear-gradient(90deg, var(--dbr-grid-1) 1px, transparent 1px),
+    var(--dbr-hull) !important;
+  background-size: 80px 80px !important;
+}
+
 body.dbr-auth .login-fullpage,
 body.dbr-auth .signup-fullpage,
 body.dbr-auth .invites-show {
-  background: var(--dbr-abyss) !important;
+  background: transparent !important;
   background-image: none !important;
-  background-size: auto !important;
 }
 
 body.login-page #main-outlet,
@@ -50,8 +61,11 @@ body.account-created-page #main-outlet {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--dbr-abyss);
-  background-image: none;
+  background:
+    linear-gradient(var(--dbr-grid-1) 1px, transparent 1px),
+    linear-gradient(90deg, var(--dbr-grid-1) 1px, transparent 1px),
+    var(--dbr-hull);
+  background-size: 80px 80px;
   color: var(--text-on-dark);
   overflow-x: clip;
 }
@@ -73,7 +87,7 @@ body.invite-page .invites-show,
   min-height: var(--size-header);
   padding: 0 var(--space-4);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: var(--dbr-abyss);
+  background: rgba(7, 26, 44, 0.94);
 }
 
 .dbr-brand {
