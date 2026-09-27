@@ -40,6 +40,13 @@
   color: var(--text-primary);
 }
 
+.post-menu-area {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 .topic-map {
   padding: 0;
   border: 0;

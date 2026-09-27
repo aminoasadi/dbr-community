@@ -938,7 +938,9 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   border-top: 1px solid var(--dbr-grid-3) !important;
   border-radius: 0 !important;
   background: transparent !important;
+  background-color: transparent !important;
   box-shadow: none !important;
+  backdrop-filter: none !important;
   clip-path: none !important;
 }
 
@@ -950,6 +952,11 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   flex-wrap: wrap;
   gap: 8px;
   min-height: 48px;
+  border: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
 .post-menu-area .btn,

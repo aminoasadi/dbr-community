@@ -1241,6 +1241,13 @@ body.bm-feedhome #list-area > .contents {
   color: var(--text-primary);
 }
 
+.post-menu-area {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 .topic-map {
   padding: 0;
   border: 0;
@@ -2909,7 +2916,9 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   border-top: 1px solid var(--dbr-grid-3) !important;
   border-radius: 0 !important;
   background: transparent !important;
+  background-color: transparent !important;
   box-shadow: none !important;
+  backdrop-filter: none !important;
   clip-path: none !important;
 }
 
@@ -2921,6 +2930,11 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   flex-wrap: wrap;
   gap: 8px;
   min-height: 48px;
+  border: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
 .post-menu-area .btn,
