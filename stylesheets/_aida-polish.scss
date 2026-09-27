@@ -1518,7 +1518,8 @@ body.admin-interface [aria-current="page"],
   clip-path: none !important;
 }
 
-.sidebar-section-link.active {
+.sidebar-section-link.active,
+.sidebar-section-link:hover {
   position: relative !important;
   overflow: hidden !important;
   border-radius: 12px 12px 0 12px !important;
