@@ -247,6 +247,7 @@
 }
 
 .topic-list-item[data-post-type="question"] a.title::before,
+.latest-topic-list-item[data-post-type="question"] a.title::before,
 .bm-type--question {
   content: "Question";
   background: var(--bg-info);
@@ -254,6 +255,7 @@
 }
 
 .topic-list-item[data-post-type="event"] a.title::before,
+.latest-topic-list-item[data-post-type="event"] a.title::before,
 .bm-type--event {
   content: "Event";
   background: rgba(18, 107, 135, 0.14);
@@ -261,6 +263,7 @@
 }
 
 .topic-list-item[data-post-type="poll"] a.title::before,
+.latest-topic-list-item[data-post-type="poll"] a.title::before,
 .bm-type--poll {
   content: "Poll";
   background: var(--bg-warning);
@@ -268,6 +271,7 @@
 }
 
 .topic-list-item[data-post-type="article"] a.title::before,
+.latest-topic-list-item[data-post-type="article"] a.title::before,
 .bm-type--article {
   content: "Article";
   background: rgba(45, 78, 110, 0.14);
@@ -275,6 +279,7 @@
 }
 
 .topic-list-item[data-post-type="request"] a.title::before,
+.latest-topic-list-item[data-post-type="request"] a.title::before,
 .bm-type--request {
   content: "Request";
   background: var(--primary-tint-14);
@@ -282,6 +287,7 @@
 }
 
 .topic-list-item[data-post-type="showcase"] a.title::before,
+.latest-topic-list-item[data-post-type="showcase"] a.title::before,
 .bm-type--showcase {
   content: "Showcase";
   background: rgba(102, 185, 204, 0.16);
@@ -289,6 +295,7 @@
 }
 
 .topic-list-item[data-post-type="announcement"] a.title::before,
+.latest-topic-list-item[data-post-type="announcement"] a.title::before,
 .bm-type--announcement {
   content: "Announcement";
   background: var(--bg-error);
@@ -296,6 +303,7 @@
 }
 
 .topic-list-item[data-post-type="pattern"] a.title::before,
+.latest-topic-list-item[data-post-type="pattern"] a.title::before,
 .bm-type--pattern {
   content: "Pattern";
   background: rgba(43, 106, 142, 0.14);
@@ -303,6 +311,7 @@
 }
 
 .topic-list-item[data-post-type="discussion"] a.title::before,
+.latest-topic-list-item[data-post-type="discussion"] a.title::before,
 .bm-type--discussion {
   content: "Discussion";
 }
