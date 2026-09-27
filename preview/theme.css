@@ -1240,7 +1240,21 @@ body.bm-feedhome #list-area > .contents {
   color: var(--text-primary);
 }
 
-.topic-map,
+.topic-map {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.topic-map__stats {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .topic-map__stats,
 .topic-status-info {
   background: var(--surface-panel);
@@ -2845,6 +2859,25 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   border-radius: 12px !important;
   background: rgba(11, 35, 56, 0.9) !important;
   box-shadow: inset 0 1px 0 rgba(244, 247, 249, 0.06) !important;
+}
+
+.topic-map {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.topic-map__stats {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 
 .topic-map *,

@@ -40,7 +40,21 @@
   color: var(--text-primary);
 }
 
-.topic-map,
+.topic-map {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.topic-map__stats {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .topic-map__stats,
 .topic-status-info {
   background: var(--surface-panel);
