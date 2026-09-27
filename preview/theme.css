@@ -1389,6 +1389,16 @@ body.account-created-page {
   background-size: auto !important;
 }
 
+body.dbr-auth #main-outlet-wrapper,
+body.dbr-auth #main-outlet,
+body.dbr-auth .login-fullpage,
+body.dbr-auth .signup-fullpage,
+body.dbr-auth .invites-show {
+  background: var(--dbr-abyss) !important;
+  background-image: none !important;
+  background-size: auto !important;
+}
+
 body.login-page #main-outlet,
 body.signup-page #main-outlet,
 body.invite-page #main-outlet,
@@ -1425,7 +1435,7 @@ body.invite-page .invites-show,
   min-height: var(--size-header);
   padding: 0 var(--space-4);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(15, 26, 37, 0.92);
+  background: var(--dbr-abyss);
 }
 
 .dbr-brand {
