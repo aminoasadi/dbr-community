@@ -1297,8 +1297,9 @@ blockquote {
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(14px) saturate(125%);
   padding: var(--space-3);
-  border-inline-start: 2px solid var(--dbr-chrome-2);
-  background: var(--dbr-deep);
+  border: 0;
+  border-radius: var(--fillet-radius) var(--fillet-radius) var(--fillet-radius) 0;
+  background: var(--surface-panel);
   color: var(--text-primary);
 }
 
@@ -3107,6 +3108,42 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
 .topic-body .cooked > * {
   position: relative;
   z-index: 2;
+}
+
+.topic-body .cooked blockquote {
+  position: relative !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 28px 32px !important;
+  color: var(--dbr-chrome-1) !important;
+  background: rgba(11, 35, 56, 0.88) !important;
+  border: 0 !important;
+  border-inline-start: 0 !important;
+  border-radius: 12px 12px 12px 0 !important;
+  box-shadow: none !important;
+  font-weight: 800 !important;
+}
+
+.topic-body .cooked blockquote::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  background: var(--bg-page);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  z-index: 1;
+}
+
+.topic-body .cooked blockquote > * {
+  position: relative;
+  z-index: 2;
+}
+
+.topic-body .cooked blockquote p {
+  margin: 0 !important;
 }
 
 .post-menu-area {

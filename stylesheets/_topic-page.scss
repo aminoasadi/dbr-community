@@ -91,7 +91,8 @@
 
 blockquote {
   @include panel-surface(var(--space-3), var(--chamfer-sm));
-  border-inline-start: 2px solid var(--dbr-chrome-2);
-  background: var(--dbr-deep);
+  border: 0;
+  border-radius: var(--fillet-radius) var(--fillet-radius) var(--fillet-radius) 0;
+  background: var(--surface-panel);
   color: var(--text-primary);
 }
