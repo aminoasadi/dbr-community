@@ -1486,6 +1486,24 @@ body.admin-interface [aria-current="page"],
   clip-path: none !important;
 }
 
+.sidebar-section-link.active {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 12px 12px 0 12px !important;
+}
+
+.sidebar-section-link.active::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  background: var(--dbr-abyss);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
 .menu-panel,
 .fk-d-menu__inner-content,
 .user-menu,
