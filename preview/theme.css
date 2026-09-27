@@ -668,7 +668,8 @@ html[lang=fa] select {
   display: none;
 }
 
-.bm-home .welcome-banner {
+.bm-home .welcome-banner,
+.bm-feedhome .welcome-banner {
   display: none !important;
 }
 

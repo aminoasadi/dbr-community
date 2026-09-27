@@ -83,7 +83,7 @@ function clearHome() {
   document.body.classList.remove("bm-home");
 }
 
-function buildHero(context, host, injectedClass = "bm-home-injected") {
+function buildHero(context, host, injectedClass = "bm-home-injected", beforeSelector = null) {
   if (context.cfg.show_hero === false) {
     return null;
   }
@@ -93,6 +93,8 @@ function buildHero(context, host, injectedClass = "bm-home-injected") {
   if (existing) {
     return existing;
   }
+
+  host.querySelectorAll(`.bm-hero.${injectedClass}`).forEach((node) => node.remove());
 
   const stale = host.querySelector(":scope > .bm-hero.bm-injected");
 
@@ -118,7 +120,9 @@ function buildHero(context, host, injectedClass = "bm-home-injected") {
     el("div", { class: "bm-hero__stats" }),
   ]);
 
-  host.insertBefore(hero, host.firstChild);
+  const beforeNode = beforeSelector ? host.querySelector(beforeSelector) : null;
+
+  host.insertBefore(hero, beforeNode || host.firstChild);
   fillHeroStats(context, hero);
 
   return hero;
@@ -307,7 +311,7 @@ function buildFeedHome(context) {
 
   if (main) {
     main.classList.add("bm-grid");
-    buildHero(context, main.querySelector(".list-container") || main, "bm-feed-injected");
+    buildHero(context, main, "bm-feed-injected", ".list-controls, .navigation-container");
   }
 
   ensureFeedRail(context);
