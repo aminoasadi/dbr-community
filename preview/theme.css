@@ -2620,6 +2620,123 @@ body.signup-page h1.login-title {
   color: #a9b6c1 !important;
 }
 
+.navigation-categories .category-list {
+  display: grid !important;
+  width: 100% !important;
+  border: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  background: transparent !important;
+}
+
+.navigation-categories .category-list thead {
+  display: none !important;
+}
+
+.navigation-categories .category-list tbody {
+  display: grid !important;
+  gap: 16px !important;
+  border: 0 !important;
+}
+
+.navigation-categories .category-list tbody tr {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(96px, auto) minmax(280px, 0.9fr) !important;
+  align-items: center !important;
+  gap: 24px !important;
+  min-height: 132px !important;
+  padding: 24px 32px !important;
+  overflow: hidden !important;
+  color: #d6dee4 !important;
+  background: rgba(11, 35, 56, 0.88) !important;
+  border: 0 !important;
+  border-radius: 12px 12px 12px 0 !important;
+  box-shadow: none !important;
+}
+
+.navigation-categories .category-list tbody tr::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  background: var(--bg-page);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  z-index: 1;
+}
+
+.navigation-categories .category-list tbody tr > td {
+  position: relative !important;
+  z-index: 2;
+  display: block !important;
+  width: auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.navigation-categories .category-list tbody tr > td:first-child {
+  min-width: 0 !important;
+}
+
+.navigation-categories .category-list .category-name,
+.navigation-categories .category-list .category-title-link,
+.navigation-categories .category-list .category-text-title,
+.navigation-categories .category-list .category-title {
+  color: #f4f7f9 !important;
+  font-weight: 800 !important;
+}
+
+.navigation-categories .category-list .category-description,
+.navigation-categories .category-list .description,
+.navigation-categories .category-list .category-stat,
+.navigation-categories .category-list .num,
+.navigation-categories .category-list .latest-topic-list .topic-date,
+.navigation-categories .category-list .latest-topic-list .relative-date {
+  color: #a9b6c1 !important;
+}
+
+.navigation-categories .category-list .latest-topic-list {
+  display: grid !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.navigation-categories .category-list .latest-topic-list-item {
+  display: block !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  color: #f4f7f9 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.navigation-categories .category-list .latest-topic-list-item::before,
+.navigation-categories .category-list .latest-topic-list-item::after {
+  content: none !important;
+  display: none !important;
+}
+
+.navigation-categories .category-list tbody tr:hover {
+  transform: translateY(-2px);
+  background: rgba(26, 63, 92, 0.62) !important;
+}
+
+@media (max-width: 900px) {
+  .navigation-categories .category-list tbody tr {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px !important;
+    padding: 22px 24px !important;
+  }
+}
+
 .topic-list td,
 .topic-list .main-link,
 .topic-list .link-bottom-line,
