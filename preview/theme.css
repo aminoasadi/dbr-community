@@ -389,7 +389,8 @@ body.dbr-auth {
   box-shadow: var(--shadow-button);
   transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
   --btn-fill: var(--bg-page);
-  --btn-stroke: var(--dbr-grid-3);
+  --btn-stroke: transparent;
+  border: 0 !important;
   border-radius: 12px 12px 12px 0;
   clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0);
   color: var(--text-on-dark);
@@ -2034,6 +2035,7 @@ body.signup-page h1.login-title {
 #create-topic,
 .btn-primary,
 .btn-danger {
+  border: 0 !important;
   border-radius: 12px 12px 12px 0 !important;
   clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
 }
@@ -2849,6 +2851,9 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   width: auto;
   min-width: 120px;
   max-width: 100%;
+  border: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
 
 .topic-map,
@@ -2936,7 +2941,8 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   border-radius: 12px 12px 12px 0 !important;
   clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
   color: var(--dbr-chrome-0) !important;
-  border-color: var(--dbr-grid-3) !important;
+  border: 0 !important;
+  border-color: transparent !important;
   background: rgba(7, 26, 44, 0.72) !important;
   font-weight: 700;
 }
@@ -3837,7 +3843,9 @@ body.admin-interface [aria-current=page],
 .user-menu button,
 .menu-panel .btn,
 .menu-panel button {
-  border-color: #1d4667 !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
 
 /*# sourceMappingURL=theme.css.map */

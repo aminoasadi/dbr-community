@@ -49,6 +49,7 @@
 #create-topic,
 .btn-primary,
 .btn-danger {
+  border: 0 !important;
   border-radius: 12px 12px 12px 0 !important;
   clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
 }
@@ -878,6 +879,9 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   width: auto;
   min-width: 120px;
   max-width: 100%;
+  border: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
 
 // Topic action row: keep count, icons, and Reply aligned without nested boxes.
@@ -966,7 +970,8 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   border-radius: 12px 12px 12px 0 !important;
   clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0) !important;
   color: var(--dbr-chrome-0) !important;
-  border-color: var(--dbr-grid-3) !important;
+  border: 0 !important;
+  border-color: transparent !important;
   background: rgba(7, 26, 44, 0.72) !important;
   font-weight: 700;
 }
@@ -1881,5 +1886,7 @@ body.admin-interface [aria-current="page"],
 .user-menu button,
 .menu-panel .btn,
 .menu-panel button {
-  border-color: #1d4667 !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }

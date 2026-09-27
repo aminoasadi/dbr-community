@@ -1,7 +1,8 @@
 .btn {
   @include button-shell();
   --btn-fill: var(--bg-page);
-  --btn-stroke: var(--dbr-grid-3);
+  --btn-stroke: transparent;
+  border: 0 !important;
   border-radius: 12px 12px 12px 0;
   clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0);
   color: var(--text-on-dark);
