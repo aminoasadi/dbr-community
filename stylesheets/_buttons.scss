@@ -4,7 +4,7 @@
   --btn-stroke: transparent;
   border: 0 !important;
   border-radius: 12px 12px 12px 0;
-  clip-path: polygon(0 16px, 16px 100%, 100% 100%, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 16px 100%, 0 calc(100% - 16px));
   color: var(--text-on-dark);
   font-size: var(--text-base);
   font-weight: var(--fw-medium);
