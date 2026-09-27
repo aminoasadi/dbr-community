@@ -2254,7 +2254,27 @@ body.signup-page h1.login-title {
   align-items: center !important;
   flex-wrap: wrap !important;
   gap: 8px !important;
-  border-color: #123049 !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.user-main .user-navigation::before,
+.user-main .user-navigation::after,
+.user-main .user-secondary-navigation::before,
+.user-main .user-secondary-navigation::after,
+.user-main .horizontal-overflow-nav::before,
+.user-main .horizontal-overflow-nav::after,
+.user-main .nav-pills::before,
+.user-main .nav-pills::after,
+.user-content .nav-pills::before,
+.user-content .nav-pills::after,
+.user-messages-page .nav-pills::before,
+.user-messages-page .nav-pills::after {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 .user-main .nav-pills > li,
@@ -2298,6 +2318,7 @@ body.signup-page h1.login-title {
 .user-messages-page .nav-pills,
 .user-messages-page .nav-pills > li,
 .user-messages-page .nav-pills > li > a {
+  border-top: 0 !important;
   border-bottom: 0 !important;
 }
 
