@@ -27,11 +27,7 @@ function replaceWelcomeBackTitle(scope = document) {
   queryAll("h1, h2, .welcome-banner, .welcome-banner *", scope)
     .filter((node) => /^Welcome back,/i.test((node.textContent || "").trim()))
     .forEach((node) => {
-      node.classList.add("dbr-welcome-title");
-      node.replaceChildren(el("span", {
-        class: "dbr-welcome-title__text",
-        text: "welcome to house of technocrats",
-      }));
+      node.textContent = "welcome to house of technocrats";
     });
 }
 
