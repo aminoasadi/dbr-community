@@ -2333,12 +2333,22 @@ body.signup-page h1.login-title {
 }
 
 .user-main .nav-pills > li > a.active,
+.user-main .nav-pills > li > a[aria-current=page],
+.user-content .nav-pills > li > a.active,
+.user-content .nav-pills > li > a[aria-current=page],
+.user-messages-page .nav-pills > li > a.active,
+.user-messages-page .nav-pills > li > a[aria-current=page] {
+  border-color: #1d4667 !important;
+  border-radius: 12px 12px 12px 0 !important;
+  clip-path: polygon(0 var(--aida-control-cut), var(--aida-control-cut) 100%, 100% 100%, 100% 0, 0 0) !important;
+  background: #12314a !important;
+  color: #f4f7f9 !important;
+}
+
 .user-main .nav-pills > li > a:hover,
 .user-main .nav-pills > li > a:focus-visible,
-.user-content .nav-pills > li > a.active,
 .user-content .nav-pills > li > a:hover,
 .user-content .nav-pills > li > a:focus-visible,
-.user-messages-page .nav-pills > li > a.active,
 .user-messages-page .nav-pills > li > a:hover,
 .user-messages-page .nav-pills > li > a:focus-visible {
   border-color: #1d4667 !important;
