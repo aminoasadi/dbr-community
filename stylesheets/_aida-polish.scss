@@ -270,6 +270,28 @@
   text-transform: uppercase !important;
 }
 
+.user-main .nav-pills,
+.user-content .nav-pills,
+.user-main .nav-pills > li,
+.user-content .nav-pills > li,
+.user-main .nav-pills > li > a,
+.user-content .nav-pills > li > a,
+.user-messages-page .nav-pills,
+.user-messages-page .nav-pills > li,
+.user-messages-page .nav-pills > li > a {
+  border-bottom: 0 !important;
+}
+
+.user-main .nav-pills > li > a::before,
+.user-main .nav-pills > li > a::after,
+.user-content .nav-pills > li > a::before,
+.user-content .nav-pills > li > a::after,
+.user-messages-page .nav-pills > li > a::before,
+.user-messages-page .nav-pills > li > a::after {
+  display: none !important;
+  content: none !important;
+}
+
 .user-main .nav-pills > li > a.active,
 .user-main .nav-pills > li > a:hover,
 .user-main .nav-pills > li > a:focus-visible,
