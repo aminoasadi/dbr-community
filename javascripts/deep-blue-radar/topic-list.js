@@ -11,7 +11,6 @@ import {
   query,
   registerEnhancer,
   removeAll,
-  safeLocalStorageGet,
   safeLocalStorageSet,
   TYPES,
 } from "./helpers";
@@ -75,46 +74,8 @@ function watchList(context) {
 }
 
 function addViewToggle() {
-  const controls =
-    query(".list-controls .nav.nav-pills")?.parentElement || query(".navigation-container");
-
-  if (!controls || controls.querySelector(".bm-viewtoggle")) {
-    return;
-  }
-
-  if (!query(".topic-list")) {
-    return;
-  }
-
-  const apply = (mode) => {
-    const main = query("#main-outlet");
-
-    if (!main) {
-      return;
-    }
-
-    main.classList.toggle("bm-grid", mode === "grid");
-    controls.querySelectorAll(".bm-viewtoggle button").forEach((button) => {
-      button.classList.toggle("active", button.dataset.mode === mode);
-    });
-    safeLocalStorageSet("bm-view", mode);
-  };
-
-  const makeButton = (mode, label) => {
-    const button = el("button", { type: "button", text: label });
-    button.dataset.mode = mode;
-    button.addEventListener("click", () => apply(mode));
-    return button;
-  };
-
-  controls.append(
-    el("div", { class: "bm-viewtoggle" }, [
-      makeButton("list", "List"),
-      makeButton("grid", "Grid"),
-    ])
-  );
-
-  apply(safeLocalStorageGet("bm-view", "list"));
+  query("#main-outlet")?.classList.remove("bm-grid");
+  safeLocalStorageSet("bm-view", "list");
 }
 
 function clearHome() {

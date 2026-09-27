@@ -343,7 +343,7 @@
 }
 
 .bm-viewtoggle {
-  display: inline-flex;
+  display: none !important;
   border: 1px solid var(--border-brand);
 }
 

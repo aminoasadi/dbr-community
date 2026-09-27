@@ -8,7 +8,6 @@ import {
   queryAll,
   registerEnhancer,
   renderIcon,
-  safeLocalStorageGet,
   safeLocalStorageSet,
   timeAgo,
 } from "./helpers";
@@ -250,29 +249,8 @@ async function buildProfileCard(context, mount) {
 }
 
 function attachFeedViewToggle(mount, feed) {
-  const apply = (mode) => {
-    feed.classList.toggle("is-grid", mode === "grid");
-    head.querySelectorAll(".bm-viewtoggle button").forEach((button) => {
-      button.classList.toggle("active", button.dataset.mode === mode);
-    });
-    safeLocalStorageSet("bm-feed-view", mode);
-  };
-
-  const makeButton = (mode, label) => {
-    const button = el("button", { type: "button", text: label });
-    button.dataset.mode = mode;
-    button.addEventListener("click", () => apply(mode));
-    return button;
-  };
-
-  const head = mount.querySelector(".bm-section-head");
-  const toggle = el("div", { class: "bm-viewtoggle" }, [
-    makeButton("list", "List"),
-    makeButton("grid", "Grid"),
-  ]);
-
-  head.append(toggle);
-  apply(safeLocalStorageGet("bm-feed-view", "list"));
+  feed.classList.remove("is-grid");
+  safeLocalStorageSet("bm-feed-view", "list");
 }
 
 export {
