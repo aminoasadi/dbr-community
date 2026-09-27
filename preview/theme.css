@@ -3406,6 +3406,67 @@ html[dir=rtl] textarea {
   opacity: 1 !important;
 }
 
+.sidebar-section :is(
+  .sidebar-section-header,
+  .sidebar-section-header.btn,
+  .sidebar-section-header.btn-transparent,
+  .sidebar-section-header-collapsable,
+  .sidebar-more-section-trigger,
+  .sidebar-more-section-trigger.btn,
+  .fk-d-menu__trigger.sidebar-more-section-trigger,
+  .sidebar-more-section-links-details-summary,
+  .sidebar-more-section-links-details-summary.btn,
+  .sidebar-section-link[data-link-name=more]
+):is(
+  :hover,
+  :focus,
+  :focus-visible,
+  :active,
+  :disabled,
+  [disabled],
+  .disabled,
+  .active,
+  .is-active,
+  .is-expanded,
+  [aria-expanded=true],
+  [aria-pressed=true],
+  [aria-disabled=true]
+),
+.sidebar-section details[open] > summary.sidebar-more-section-links-details-summary,
+.sidebar-section details[open] .sidebar-more-section-trigger,
+.sidebar-section details[open] .fk-d-menu__trigger {
+  color: #d6dee4 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  border-inline: 0 !important;
+  border-block: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+.sidebar-section :is(
+  .sidebar-section-header,
+  .sidebar-section-header-collapsable,
+  .sidebar-more-section-trigger,
+  .sidebar-more-section-links-details-summary,
+  .sidebar-section-link[data-link-name=more]
+):is(:hover, :focus, :focus-visible, :active, [aria-expanded=true], [aria-disabled=true], [disabled], .disabled) :is(
+  .d-icon,
+  .svg-icon,
+  svg,
+  .sidebar-section-header-text,
+  .sidebar-section-link-content-text
+) {
+  color: #d6dee4 !important;
+  fill: currentColor !important;
+  opacity: 1 !important;
+}
+
 body.admin-interface .admin-sidebar,
 body.admin-interface .admin-nav,
 body.admin-interface .admin-menu,
