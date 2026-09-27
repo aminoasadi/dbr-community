@@ -79,8 +79,49 @@ function addViewToggle() {
 }
 
 function clearHome() {
-  removeAll(".bm-injected");
+  removeAll(".bm-home-injected");
   document.body.classList.remove("bm-home");
+}
+
+function buildHero(context, host, injectedClass = "bm-home-injected") {
+  if (context.cfg.show_hero === false) {
+    return null;
+  }
+
+  const existing = host.querySelector(`:scope > .bm-hero.${injectedClass}`);
+
+  if (existing) {
+    return existing;
+  }
+
+  const stale = host.querySelector(":scope > .bm-hero.bm-injected");
+
+  if (stale) {
+    stale.remove();
+  }
+
+  const hero = el("section", { class: `bm-hero bm-injected ${injectedClass}` }, [
+    el("div", {
+      class: "bm-hero__eyebrow",
+      text: context.cfg.hero_eyebrow || "House of Technocrats · Technocrats Community",
+    }),
+    el("h1", {
+      class: "bm-hero__title",
+      text: context.cfg.hero_title || "Where the conversation is well-made.",
+    }),
+    el("p", {
+      class: "bm-hero__sub",
+      text:
+        context.cfg.hero_subtitle ||
+        "Browse Collections and Spaces, follow posts by type, and climb the engagement leaderboard.",
+    }),
+    el("div", { class: "bm-hero__stats" }),
+  ]);
+
+  host.insertBefore(hero, host.firstChild);
+  fillHeroStats(context, hero);
+
+  return hero;
 }
 
 async function fillHeroStats(context, hero) {
@@ -187,31 +228,10 @@ function buildHome(context) {
   const host = main.querySelector(".list-container") || main;
   document.body.classList.add("bm-home");
 
-  if (context.cfg.show_hero !== false && !host.querySelector(":scope > .bm-hero")) {
-    const hero = el("section", { class: "bm-hero bm-injected" }, [
-      el("div", {
-        class: "bm-hero__eyebrow",
-        text: context.cfg.hero_eyebrow || "House of Technocrats · Technocrats Community",
-      }),
-      el("h1", {
-        class: "bm-hero__title",
-        text: context.cfg.hero_title || "Where the conversation is well-made.",
-      }),
-      el("p", {
-        class: "bm-hero__sub",
-        text:
-          context.cfg.hero_subtitle ||
-          "Browse Collections and Spaces, follow posts by type, and climb the engagement leaderboard.",
-      }),
-      el("div", { class: "bm-hero__stats" }),
-    ]);
-
-    host.insertBefore(hero, host.firstChild);
-    fillHeroStats(context, hero);
-  }
+  buildHero(context, host);
 
   if (!host.querySelector(".bm-cat-head")) {
-    const head = el("div", { class: "bm-section-head bm-cat-head bm-injected" }, [
+    const head = el("div", { class: "bm-section-head bm-cat-head bm-injected bm-home-injected" }, [
       el("h2", { text: "Collections & Spaces" }),
       el("span", { class: "bm-section-meta", text: "Browse by topic" }),
     ]);
@@ -225,7 +245,7 @@ function buildHome(context) {
   }
 
   if (!host.querySelector(":scope > .bm-home__grid")) {
-    const grid = el("div", { class: "bm-home__grid bm-injected" });
+    const grid = el("div", { class: "bm-home__grid bm-injected bm-home-injected" });
     const column = el("div", { class: "bm-home__main" });
     const rail = el("aside", { class: "bm-rail" });
 
@@ -287,12 +307,15 @@ function buildFeedHome(context) {
 
   if (main) {
     main.classList.add("bm-grid");
+    buildHero(context, main.querySelector(".list-container") || main, "bm-feed-injected");
   }
 
   ensureFeedRail(context);
 }
 
 function clearFeedHome() {
+  removeAll(".bm-feed-injected");
+
   if (feedRail && feedRail.parentElement) {
     feedRail.parentElement.removeChild(feedRail);
   }
