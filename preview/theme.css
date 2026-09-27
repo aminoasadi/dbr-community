@@ -3047,6 +3047,37 @@ button.btn:not(.no-text):not(.icon):not(.btn-icon) {
   font-weight: 700 !important;
 }
 
+.topic-body .cooked {
+  position: relative !important;
+  overflow: hidden !important;
+  margin: 0 0 16px !important;
+  padding: 28px 32px !important;
+  color: var(--dbr-chrome-1) !important;
+  background: rgba(11, 35, 56, 0.88) !important;
+  border: 0 !important;
+  border-radius: 12px 12px 12px 0 !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+}
+
+.topic-body .cooked::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  background: var(--bg-page);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  z-index: 1;
+}
+
+.topic-body .cooked > * {
+  position: relative;
+  z-index: 2;
+}
+
 .post-menu-area {
   padding: 16px 0 !important;
   color: var(--dbr-chrome-2) !important;
