@@ -549,6 +549,24 @@
   color: #f4f7f9 !important;
 }
 
+.topic-list-item a:focus,
+.topic-list-item a:focus-visible,
+.topic-list-item a:active,
+.topic-list-item .title:focus,
+.topic-list-item .title:focus-visible,
+.topic-list-item .title:active,
+.latest-topic-list-item a:focus,
+.latest-topic-list-item a:focus-visible,
+.latest-topic-list-item a:active,
+.latest-topic-list-item .title:focus,
+.latest-topic-list-item .title:focus-visible,
+.latest-topic-list-item .title:active {
+  outline: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
 .topic-list .age,
 .topic-list .activity,
 .topic-list .link-bottom-line,
