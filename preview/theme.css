@@ -3482,6 +3482,200 @@ body.admin-interface [aria-current=page],
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%) !important;
 }
 
+.admin-sidebar,
+.admin-sidebar-wrapper,
+.admin-sidebar__wrapper,
+.admin-sidebar-container,
+.admin-sidebar__container,
+.admin-sidebar-content,
+.admin-sidebar__content,
+.admin-sidebar-nav,
+.admin-nav-sidebar,
+.admin-menu,
+.admin-menu-panel,
+.admin-navigation,
+.admin-section-nav,
+.admin-config-nav,
+.admin-main-nav,
+.admin-drawer,
+.admin-drawer__content,
+.admin-panel-sidebar,
+body.admin-interface .admin-sidebar,
+body.admin-interface .admin-nav,
+body.admin-interface .admin-menu,
+body.admin-interface .admin-sidebar-nav,
+body.admin-interface .admin-main-nav,
+body.admin-interface .admin-section-nav,
+body.admin-interface .admin-config-nav,
+body.admin-interface .admin-config-area .sidebar,
+body.admin-interface .admin-container .sidebar,
+body.admin-interface [class*=admin-sidebar],
+body.admin-interface [class*=admin-nav-sidebar],
+[class*=admin-sidebar],
+[class*=admin-nav-sidebar] {
+  color: #d6dee4 !important;
+  background: #071a2c !important;
+  background-color: #071a2c !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.admin-sidebar *,
+.admin-sidebar-wrapper *,
+.admin-sidebar__wrapper *,
+.admin-sidebar-container *,
+.admin-sidebar__container *,
+.admin-sidebar-content *,
+.admin-sidebar__content *,
+.admin-sidebar-nav *,
+.admin-nav-sidebar *,
+.admin-menu *,
+.admin-menu-panel *,
+.admin-navigation *,
+.admin-section-nav *,
+.admin-config-nav *,
+.admin-main-nav *,
+.admin-drawer *,
+.admin-drawer__content *,
+.admin-panel-sidebar *,
+body.admin-interface [class*=admin-sidebar] *,
+body.admin-interface [class*=admin-nav-sidebar] *,
+[class*=admin-sidebar] *,
+[class*=admin-nav-sidebar] * {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.admin-sidebar a,
+.admin-sidebar button,
+.admin-sidebar-wrapper a,
+.admin-sidebar-wrapper button,
+.admin-sidebar__wrapper a,
+.admin-sidebar__wrapper button,
+.admin-sidebar-nav a,
+.admin-sidebar-nav button,
+.admin-nav-sidebar a,
+.admin-nav-sidebar button,
+.admin-menu a,
+.admin-menu button,
+.admin-navigation a,
+.admin-navigation button,
+.admin-section-nav a,
+.admin-section-nav button,
+.admin-config-nav a,
+.admin-config-nav button,
+.admin-drawer a,
+.admin-drawer button,
+body.admin-interface [class*=admin-sidebar] a,
+body.admin-interface [class*=admin-sidebar] button,
+[class*=admin-sidebar] a,
+[class*=admin-sidebar] button {
+  min-height: 48px !important;
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  color: #d6dee4 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.35 !important;
+  text-transform: none !important;
+}
+
+.admin-sidebar svg,
+.admin-sidebar .d-icon,
+.admin-sidebar .svg-icon,
+.admin-sidebar-wrapper svg,
+.admin-sidebar-wrapper .d-icon,
+.admin-sidebar__wrapper svg,
+.admin-sidebar__wrapper .d-icon,
+.admin-sidebar-nav svg,
+.admin-sidebar-nav .d-icon,
+.admin-nav-sidebar svg,
+.admin-nav-sidebar .d-icon,
+.admin-menu svg,
+.admin-menu .d-icon,
+[class*=admin-sidebar] svg,
+[class*=admin-sidebar] .d-icon {
+  flex: 0 0 24px !important;
+  width: 24px !important;
+  height: 24px !important;
+  color: currentColor !important;
+  opacity: 1 !important;
+}
+
+.admin-sidebar h3,
+.admin-sidebar .admin-sidebar-section-title,
+.admin-sidebar .sidebar-section-header-text,
+.admin-sidebar-wrapper h3,
+.admin-sidebar-wrapper .admin-sidebar-section-title,
+.admin-sidebar-nav h3,
+.admin-nav-sidebar h3,
+.admin-menu h3,
+[class*=admin-sidebar] h3,
+[class*=admin-sidebar] .admin-sidebar-section-title,
+[class*=admin-sidebar] .sidebar-section-header-text {
+  color: #a9b6c1 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+.admin-sidebar a.active,
+.admin-sidebar button.active,
+.admin-sidebar a:hover,
+.admin-sidebar button:hover,
+.admin-sidebar [aria-current=page],
+.admin-sidebar-wrapper a.active,
+.admin-sidebar-wrapper button.active,
+.admin-sidebar-wrapper a:hover,
+.admin-sidebar-wrapper button:hover,
+.admin-sidebar__wrapper a.active,
+.admin-sidebar__wrapper button.active,
+.admin-sidebar__wrapper a:hover,
+.admin-sidebar__wrapper button:hover,
+.admin-sidebar-nav a.active,
+.admin-sidebar-nav button.active,
+.admin-sidebar-nav a:hover,
+.admin-sidebar-nav button:hover,
+.admin-nav-sidebar a.active,
+.admin-nav-sidebar button.active,
+.admin-nav-sidebar a:hover,
+.admin-nav-sidebar button:hover,
+.admin-menu a.active,
+.admin-menu button.active,
+.admin-menu a:hover,
+.admin-menu button:hover,
+body.admin-interface [class*=admin-sidebar] a.active,
+body.admin-interface [class*=admin-sidebar] button.active,
+body.admin-interface [class*=admin-sidebar] a:hover,
+body.admin-interface [class*=admin-sidebar] button:hover,
+body.admin-interface [aria-current=page],
+[class*=admin-sidebar] a.active,
+[class*=admin-sidebar] button.active,
+[class*=admin-sidebar] a:hover,
+[class*=admin-sidebar] button:hover,
+[class*=admin-sidebar] [aria-current=page] {
+  position: relative !important;
+  overflow: hidden !important;
+  color: #f4f7f9 !important;
+  background: #12314a !important;
+  border: 0 !important;
+  border-radius: 12px 12px 0 12px !important;
+  box-shadow: none !important;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%) !important;
+  font-weight: 700 !important;
+}
+
 .menu-panel,
 .fk-d-menu__inner-content,
 .user-menu,
