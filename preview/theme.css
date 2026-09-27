@@ -4238,7 +4238,7 @@ body.signup-page .create-account-body,
 body.invite-page .invite-form {
   box-sizing: border-box !important;
   display: block !important;
-  width: min(100%, 420px) !important;
+  width: 100% !important;
   max-width: 420px !important;
   padding: 24px !important;
   overflow: visible !important;
